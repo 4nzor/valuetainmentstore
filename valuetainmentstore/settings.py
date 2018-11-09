@@ -25,7 +25,7 @@ SECRET_KEY = 'apoby^+qu&e2zgl7j@$^hr%9@*ji^e^e$q$)m6$&2x8cc2f3=p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'valuetainmentstore.pythonanywhere.com']
+ALLOWED_HOSTS = [u'valuetainmentstore.pythonanywhere.com','*']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'store'
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,6 @@ ROOT_URLCONF = 'valuetainmentstore.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
