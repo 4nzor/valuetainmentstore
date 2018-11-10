@@ -1,0 +1,104 @@
+<script id="AjaxQty" type="text/template">
+
+        <div class="ajaxcart__qty">
+            <button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--minus _icon-fallback-text"
+                    data-id="{{ id }}" data-qty="{{ itemMinus }}">
+                <span class="icon icon-minus" aria-hidden="true"></span>
+                <span class="fallback-text">&minus;</span>
+            </button>
+            <input type="text" class="ajaxcart__qty-num" value="{{ itemQty }}" min="0" data-id="{{ id }}"
+                   aria-label="quantity" pattern="[0-9]*">
+            <button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--plus _icon-fallback-text"
+                    data-id="{{ id }}" data-qty="{{ itemAdd }}">
+                <span class="icon icon-plus" aria-hidden="true"></span>
+                <span class="fallback-text">+</span>
+            </button>
+        </div>
+
+    </script>
+    <script id="JsQty" type="text/template">
+
+        <div class="js-qty">
+            <button type="button" class="js-qty__adjust js-qty__adjust--minus _icon-fallback-text" data-id="{{ id }}"
+                    data-qty="{{ itemMinus }}">
+                <span class="icon icon-minus" aria-hidden="true"></span>
+                <span class="fallback-text">&minus;</span>
+            </button>
+            <input type="text" class="js-qty__num" value="{{ itemQty }}" min="1" data-id="{{ id }}"
+                   aria-label="quantity" pattern="[0-9]*" name="{{ inputName }}" id="{{ inputId }}">
+            <button type="button" class="js-qty__adjust js-qty__adjust--plus _ico-fallback-text" data-id="{{ id }}"
+                    data-qty="{{ itemAdd }}">
+                <span class="icon icon-plus" aria-hidden="true"></span>
+                <span class="fallback-text">+</span>
+            </button>
+        </div>
+
+    </script>
+    <script src="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/ajax-cart.js?8879239935739047236"
+            type="text/javascript"></script>
+    <script>
+        jQuery(function ($) {
+            ajaxCart.init({
+                formSelector: '#AddToCartForm',
+                cartContainer: '#CartContainer',
+                addToCartSelector: '#AddToCart',
+                cartCountSelector: '#CartCount,#drawer-cart-title-qty',
+                cartCostSelector: '#CartCost',
+                moneyFormat: "${{amount}}"
+            });
+        });
+
+        jQuery('body').on('ajaxCart.afterCartLoad', function (evt, cart) {
+            // Bind to 'ajaxCart.afterCartLoad' to run any javascript after the cart has loaded in the DOM
+            timber.RightDrawer.open();
+        });
+    </script>
+    <script>
+        var timer = setInterval(function () {
+            if (jQuery('[action="/cart"]').length > 0) {
+                var params = ga.getAll()[0].get('linkerParam')
+                var action = jQuery('.cart.ajaxcart').attr('action');
+                jQuery('.cart.ajaxcart').attr('action', action + "?" + params);
+                console.log("Seen cart");
+                clearInterval(timer);
+
+            }
+        }, 1000)
+    </script>
+    <script type="text/javascript">
+        var triggermail = triggermail || [];
+        triggermail.load = function (a) {
+            var b = document.createElement("script");
+            b.type = "text/javascript";
+            b.async = !0;
+            b.src = ("https:" === document.location.protocol ? "https://" : "http://") + "triggeredmail.appspot.com/triggermail.js/" + a + ".js";
+            a = document.getElementsByTagName("script")[0];
+            a.parentNode.insertBefore(b, a)
+        };
+        triggermail.load("500_level");
+        window.triggermail = triggermail;
+    </script>
+
+
+    <!-- Begin Google Analytics Vertical Attributes -->
+    <script type="text/javascript">
+        ga('set', 'dimension1', 'shopify_US_1825854390331_17804177965115');
+        ga('set', 'dimension2', 'index');
+        ga('set', 'dimension3', '24.99');
+    </script>
+
+    <script type="text/javascript">
+        var _learnq = _learnq || [];
+
+        _learnq.push(['account', 'PruMDc']);
+
+        (function () {
+            var b = document.createElement('script');
+            b.type = 'text/javascript';
+            b.async = true;
+            b.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'a.klaviyo.com/media/js/analytics/analytics.js';
+            var a = document.getElementsByTagName('script')[0];
+            a.parentNode.insertBefore(b, a);
+        })();
+    </script>
+    <!-- Begin linked options on product page script -->

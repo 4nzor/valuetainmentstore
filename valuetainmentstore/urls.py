@@ -13,12 +13,15 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf.urls.static import static
 from django.contrib import admin
-from django.shortcuts import render
-from django.urls import path
-def index(request):
-    return render(request,'index.html',{'#items':1})
+from django.urls import path, include
+
+from valuetainmentstore import local_settings
+
 urlpatterns = [
-    path('',index),
+    path('', include('store.urls')),
     path('admin/', admin.site.urls),
+
 ]
+urlpatterns += static(local_settings.MEDIA_URL, document_root=local_settings.MEDIA_ROOT)

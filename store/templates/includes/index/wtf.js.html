@@ -1,0 +1,264 @@
+<script id="apple-pay-shop-capabilities" type="application/json">{"shopId":23043009,"countryCode":"US","currencyCode":"USD","merchantCapabilities":["supports3DS"],"merchantId":"gid:\/\/shopify\/Shop\/23043009","merchantName":"Valuetainment","requiredBillingContactFields":["postalAddress","email"],"requiredShippingContactFields":["postalAddress","email"],"shippingType":"shipping","supportedNetworks":["visa","masterCard","amex","discover"],"total":{"type":"pending","label":"Valuetainment","amount":"1.00"}}</script>
+    <script id="shopify-features" type="application/json">{"accessToken":"eb377f0760099323ec19a333b70e20bb","betas":[],"domain":"www.valuetainmentstore.com","shopId":23043009,"smart_payment_buttons_url":"https:\/\/cdn.shopifycloud.com\/payment-sheet\/assets\/latest\/spb.js"}</script>
+    <script>var Shopify = Shopify || {};
+    Shopify.shop = "valuetainment.myshopify.com";
+    Shopify.currency = {"active": "USD"};
+    Shopify.shopToPresentmentPrice = function (price) {
+        var new_price = 1.0 * price;
+        return new_price.toFixed(2);
+    };
+    Shopify.theme = {"name": "storefront-theme-5-5", "id": 35915923515, "theme_store_id": null, "role": "main"};
+    Shopify.theme.handle = "null";
+    Shopify.theme.style = {"id": null, "handle": null};</script>
+    <script>window.ShopifyPay = window.ShopifyPay || {};
+    window.ShopifyPay.apiHost = "pay.shopify.com";
+    window.ShopifyPay.crossStoreEnabled = true;</script>
+    <script id="__st">var __st = {
+        "a": 23043009,
+        "offset": -21600,
+        "reqid": "f5ef1850-d936-4a53-8424-106d867a6fe0",
+        "pageurl": "www.valuetainmentstore.com\/",
+        "u": "16418bd34f73",
+        "p": "home"
+    };</script>
+    <script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
+    <script>window.Shopify = window.Shopify || {};
+    window.Shopify.Checkout = window.Shopify.Checkout || {};
+    window.Shopify.Checkout.apiHost = "valuetainment.myshopify.com";</script>
+    <script>window.ShopifyAnalytics = window.ShopifyAnalytics || {};
+    window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
+    window.ShopifyAnalytics.meta.currency = 'USD';
+    var meta = {"page": {"pageType": "home"}};
+    for (var attr in meta) {
+        window.ShopifyAnalytics.meta[attr] = meta[attr];
+    }</script>
+    <script>window.ShopifyAnalytics.merchantGoogleAnalytics = function () {
+
+    };
+    </script>
+    <script class="analytics">(function () {
+        var customDocumentWrite = function (content) {
+            var jquery = null;
+
+            if (window.jQuery) {
+                jquery = window.jQuery;
+            } else if (window.Checkout && window.Checkout.$) {
+                jquery = window.Checkout.$;
+            }
+
+            if (jquery) {
+                jquery('body').append(content);
+            }
+        };
+
+        var trekkie = window.ShopifyAnalytics.lib = window.trekkie = window.trekkie || [];
+        if (trekkie.integrations) {
+            return;
+        }
+        trekkie.methods = [
+            'identify',
+            'page',
+            'ready',
+            'track',
+            'trackForm',
+            'trackLink'
+        ];
+        trekkie.factory = function (method) {
+            return function () {
+                var args = Array.prototype.slice.call(arguments);
+                args.unshift(method);
+                trekkie.push(args);
+                return trekkie;
+            };
+        };
+        for (var i = 0; i < trekkie.methods.length; i++) {
+            var key = trekkie.methods[i];
+            trekkie[key] = trekkie.factory(key);
+        }
+        trekkie.load = function (config) {
+            trekkie.config = config;
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.onerror = function (e) {
+                (new Image()).src = '//v.shopify.com/internal_errors/track?error=trekkie_load';
+            };
+            script.async = true;
+            script.src = 'https://cdn.shopify.com/s/javascripts/tricorder/trekkie.storefront.min.js?v=2017.09.05.1';
+            var first = document.getElementsByTagName('script')[0];
+            first.parentNode.insertBefore(script, first);
+        };
+        trekkie.load(
+            {
+                "Trekkie": {
+                    "appName": "storefront",
+                    "development": false,
+                    "defaultAttributes": {
+                        "shopId": 23043009,
+                        "isMerchantRequest": null,
+                        "themeId": 35915923515,
+                        "themeCityHash": 2001610493737976640
+                    }
+                },
+                "Performance": {
+                    "navigationTimingApiMeasurementsEnabled": true,
+                    "navigationTimingApiMeasurementsSampleRate": 1.0
+                },
+                "Facebook Pixel": {"pixelIds": ["207215209719695"], "agent": "plshopify1.2"},
+                "Session Attribution": {}
+            }
+        );
+
+        var loaded = false;
+        trekkie.ready(function () {
+            if (loaded) return;
+            loaded = true;
+
+            window.ShopifyAnalytics.lib = window.trekkie;
+
+
+            var originalDocumentWrite = document.write;
+            document.write = customDocumentWrite;
+            try {
+                window.ShopifyAnalytics.merchantGoogleAnalytics.call(this);
+            } catch (error) {
+            }
+            ;
+            document.write = originalDocumentWrite;
+
+
+            window.ShopifyAnalytics.lib.page(
+                null,
+                {"pageType": "home"}
+            );
+
+
+        });
+
+
+        var eventsListenerScript = document.createElement('script');
+        eventsListenerScript.async = true;
+        eventsListenerScript.src = "//cdn.shopify.com/s/assets/shop_events_listener-76ce6d7f3e50d4b8c05874c34d2ea1340c45e5babba61276dadcaeed488ca16a.js";
+        document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
+
+    })();</script>
+    <script crossorigin="anonymous" defer="defer"
+            src="//cdn.shopify.com/s/assets/shopify_pay/storefront-fe31d6a6f8b299bf1d018618c066f4704f961ac0b1939d90d804f157451c6312.js?v=20181030"></script>
+    <script integrity="sha256-/hmvj0IimPh8mlgYqo1p0Wr3Jt84KR7FQYjY+XiKZZo=" defer="defer"
+            src="//cdn.shopify.com/s/assets/storefront/express_buttons-fe19af8f422298f87c9a5818aa8d69d16af726df38291ec54188d8f9788a659a.js"
+            crossorigin="anonymous"></script>
+    <script integrity="sha256-NfqRkSQwKw0JfNupCky6Zxtoijw8YUA8km/3gYu7kY8=" defer="defer"
+            src="//cdn.shopify.com/s/assets/storefront/features-35fa919124302b0d097cdba90a4cba671b688a3c3c61403c926ff7818bbb918f.js"
+            crossorigin="anonymous"></script>
+
+    <script>window.BOLD = window.BOLD || {};
+    window.BOLD.common = window.BOLD.common || {};
+    window.BOLD.common.Shopify = window.BOLD.common.Shopify || {};
+
+    window.BOLD.common.Shopify.shop = {
+        domain: 'www.valuetainmentstore.com',
+        permanent_domain: 'valuetainment.myshopify.com',
+        url: 'https://www.valuetainmentstore.com',
+        secure_url: 'https://www.valuetainmentstore.com',
+        money_format: "${{amount}}",
+        currency: "USD"
+    };
+
+    window.BOLD.common.Shopify.cart = {
+        "token": "5cc892826f47bf47cf6ab57089414022",
+        "note": null,
+        "attributes": {},
+        "original_total_price": 0,
+        "total_price": 0,
+        "total_discount": 0,
+        "total_weight": 0.0,
+        "item_count": 0,
+        "items": [],
+        "requires_shipping": false,
+        "currency": "USD"
+    };
+    window.BOLD.common.template = 'index';
+    window.BOLD.common.Shopify.formatMoney = function (money, format) {
+        function n(t, e) {
+            return 'undefined' == typeof t ? e : t
+        }
+
+        function r(t, e, r, i) {
+            if (e = n(e, 2),
+                    r = n(r, ','),
+                    i = n(i, '.'),
+                isNaN(t) || null == t)
+                return 0;
+            t = (t / 100).toFixed(e);
+            var o = t.split('.')
+                , a = o[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1' + r)
+                , s = o[1] ? i + o[1] : '';
+            return a + s
+        }
+
+        'string' == typeof money && (money = money.replace('.', ''));
+        var i = ''
+            , o = /\{\{\s*(\w+)\s*\}\}/
+            ,
+            a = format || window.BOLD.common.Shopify.shop.money_format || window.Shopify.money_format || '$ {{ amount }}';
+        switch (a.match(o)[1]) {
+            case 'amount':
+                i = r(money, 2);
+                break;
+            case 'amount_no_decimals':
+                i = r(money, 0);
+                break;
+            case 'amount_with_comma_separator':
+                i = r(money, 2, '.', ',');
+                break;
+            case 'amount_no_decimals_with_comma_separator':
+                i = r(money, 0, '.', ',');
+                break;
+            case 'amount_with_space_separator':
+                i = r(money, 2, '.', ' ');
+                break;
+            case 'amount_no_decimals_with_space_separator':
+                i = r(money, 0, '.', ' ');
+                break;
+        }
+        return a.replace(o, i);
+    };
+
+    window.BOLD.common.Shopify.saveProduct = function (handle, product) {
+        if (typeof handle === 'string' && typeof window.BOLD.common.Shopify.products[handle] === 'undefined') {
+            if (typeof product === 'number') {
+                window.BOLD.common.Shopify.handles[product] = handle;
+                product = {id: product};
+            }
+            window.BOLD.common.Shopify.products[handle] = product;
+        }
+    };
+
+    window.BOLD.common.Shopify.saveVariant = function (variant_id, variant) {
+        if (typeof variant_id === 'number' && typeof window.BOLD.common.Shopify.variants[variant_id] === 'undefined') {
+            window.BOLD.common.Shopify.variants[variant_id] = variant;
+        }
+    };
+    window.BOLD.common.Shopify.products = window.BOLD.common.Shopify.products || {};
+    window.BOLD.common.Shopify.variants = window.BOLD.common.Shopify.variants || {};
+    window.BOLD.common.Shopify.handles = window.BOLD.common.Shopify.handles || {};
+    window.BOLD.common.Shopify.saveProduct("patrick-bet-david-t-shirt-valuetainment-companies-25", 1825854390331);
+    window.BOLD.common.Shopify.saveVariant(17804177965115, {product_id: 1825854390331, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804177997883, {product_id: 1825854390331, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804178063419, {product_id: 1825854390331, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804178161723, {product_id: 1825854390331, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804178227259, {product_id: 1825854390331, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804178260027, {product_id: 1825854390331, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804178325563, {product_id: 1825854390331, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804178358331, {product_id: 1825854390331, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804178423867, {product_id: 1825854390331, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804178489403, {product_id: 1825854390331, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804178554939, {product_id: 1825854390331, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804178620475, {product_id: 1825854390331, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804178686011, {product_id: 1825854390331, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804178751547, {product_id: 1825854390331, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804178817083, {product_id: 1825854390331, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804178882619, {product_id: 1825854390331, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804178915387, {product_id: 1825854390331, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804178980923, {product_id: 1825854390331, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.metafields = window.BOLD.common.Shopify.metafields || {};
+    window.BOLD.common.Shopify.metafields["bold_rp"] = {};</script>

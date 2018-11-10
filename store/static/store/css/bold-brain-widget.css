@@ -1,0 +1,250 @@
+.bold-recommend__product, .bold-recommend__product * {
+            transition: opacity .4s ease-in-out !important
+        }
+
+        .bold-recommend {
+            margin-bottom: 30px
+        }
+
+        .bold-recommend__wrap {
+            max-width: 1280px;
+            width: 100%;
+            padding: 20px 0;
+            margin: 0 auto
+        }
+
+        .bold-recommend__grid {
+            box-sizing: border-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-flow: row wrap;
+            -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+            margin-left: -20px
+        }
+
+        .bold-recommend__title {
+            margin-bottom: 20px
+        }
+
+        .bold-recommend__product {
+            -webkit-flex-basis: 25%;
+            -ms-flex-preferred-size: 25%;
+            flex-basis: 25%;
+            max-width: 25%;
+            width: 25%;
+            box-sizing: border-box;
+            -webkit-flex: 0 0 auto;
+            -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+            padding: 0 0 0 20px;
+            color: currentColor;
+            opacity: 1;
+            cursor: pointer
+        }
+
+        .bold-recommend__img, .bold-recommend__product img {
+            width: 100%;
+            height: auto
+        }
+
+        .bold-recommend__product:hover {
+            opacity: .75
+        }
+
+        .bold-recommend__product h4 {
+            margin: 0 0 8px !important;
+            opacity: .9
+        }
+
+        .bold-recommend__product h5 {
+            margin: 0 0 10px !important;
+            opacity: .65
+        }
+
+        .bold-recommend__img {
+            display: block;
+            padding-bottom: 100%;
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat
+        }
+
+        @media screen and (max-width: 1300px) {
+            .bold-recommend__wrap {
+                padding: 20px 15px !important
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            .bold-recommend__product {
+                -webkit-flex-basis: 50%;
+                -ms-flex-preferred-size: 50%;
+                flex-basis: 50%;
+                max-width: 50%;
+                width: 50%
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .bold-recommend__product {
+                -webkit-flex-basis: 100%;
+                -ms-flex-preferred-size: 100%;
+                flex-basis: 100%;
+                max-width: 100%;
+                width: 100%
+            }
+
+            .bold-recommend__product img {
+                margin: 0 auto;
+                display: block
+            }
+        }
+
+        /* unslider.css */
+        .unslider-fade, .unslider-wrap {
+            position: relative
+        }
+
+        .unslider-wrap.unslider-carousel > li {
+            float: left
+        }
+
+        .unslider-vertical > ul {
+            height: 100%
+        }
+
+        .unslider-vertical li {
+            float: none;
+            width: 100%
+        }
+
+        .unslider-fade .unslider-wrap li {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            z-index: 8
+        }
+
+        .unslider-fade .unslider-wrap li.unslider-active {
+            z-index: 10
+        }
+
+        .unslider li, .unslider ol, .unslider ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            border: none
+        }
+
+        .unslider-arrow {
+            position: absolute;
+            left: 20px;
+            z-index: 2;
+            cursor: pointer
+        }
+
+        .unslider-arrow.next {
+            left: auto;
+            right: 20px
+        }
+
+        .unslider {
+            overflow: auto;
+            margin: 0;
+            padding: 0;
+            position: relative
+        }
+
+        .unslider-nav {
+            position: absolute;
+            bottom: 20px;
+            width: 100%
+        }
+
+        .unslider-nav ol li {
+            width: 15px !important;
+            height: 15px !important;
+            border-radius: 8px !important
+        }
+
+        .unslider-arrow.next, .unslider-arrow.prev {
+            top: 42%;
+            color: #fff
+        }
+
+        .unslider-arrow {
+            font-size: 30px;
+            background-color: rgba(0, 0, 0, .2);
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px !important;
+            border-radius: 50%
+        }
+
+        /* unslider-dots.css */
+        .unslider-nav ol {
+            list-style: none;
+            text-align: center;
+            margin-bottom: 20px
+        }
+
+        .unslider-nav ol li {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            margin: 0 4px;
+            background: 0 0;
+            border-radius: 5px;
+            overflow: hidden;
+            text-indent: -999em;
+            border: 2px solid #fff;
+            cursor: pointer
+        }
+
+        .unslider-nav ol li.unslider-active {
+            background: #fff;
+            cursor: default
+        }
+
+        /* sticky.min.css */
+        .ui.sticky {
+            position: static;
+            -webkit-transition: none;
+            transition: none;
+            z-index: 800
+        }
+
+        .ui.sticky.bound {
+            position: absolute;
+            left: auto;
+            right: auto
+        }
+
+        .ui.sticky.fixed {
+            position: fixed;
+            left: auto;
+            right: auto
+        }
+
+        .ui.sticky.bound.top, .ui.sticky.fixed.top {
+            top: 0;
+            bottom: auto
+        }
+
+        .ui.sticky.bound.bottom, .ui.sticky.fixed.bottom {
+            top: auto;
+            bottom: 0
+        }
+
+        .ui.native.sticky {
+            position: -webkit-sticky;
+            position: -moz-sticky;
+            position: -ms-sticky;
+            position: -o-sticky;
+            position: sticky
+        }
+

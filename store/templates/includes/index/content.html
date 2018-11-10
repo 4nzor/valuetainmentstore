@@ -1,0 +1,234 @@
+<div class="container content" style="padding-top:0">
+        <main class="wrapper main-content" role="main">
+            <div class="grid-uniform" id="mobile-home-boxes">
+            </div>
+            <div class="grid-uniform home-boxes">
+            </div>
+            <!-- /templates/index.liquid -->
+            <h2></h2>
+            <div class="grid-uniform home-grid">
+                <!-- TRUE RED PATCH? -->
+                {% for foo in product %}
+                <div class="grid__item fixed-width-variable-columns product">
+                    <figure class="product-image-conatiner">
+                        <a href="{% url 'product_page' %}"
+                           class="link grid__image kids"><img style="width: 480px ;height: 480px;" data-n="1" class=""
+                                                              src="{{ foo.image.url }}"
+                                                              data-src="//cdn.shopify.com/s/files/1/2304/3009/products/Men-Premium-T-Shirt-Tri-Gray_99975a6f-1edc-4202-800c-e191564e9676_large.jpg?v=1540955338"
+                                                              alt="">
+                            <div class="product-title">{{ foo.title }}</div>
+                            <div class="product-style">{{ foo.style }}</div>
+                            <p class="price">{{ foo.price }} рублей</p>
+                            <div class="ui loader"></div>
+                        </a>
+                        <ul class="product-options">
+                            <li id="product-options-1825917534267">
+                                <div class="product-options-set set-2 o-2">
+                                    <!-- TRUE RED PATCH? -->
+                                    <label class="color  number-1"
+                                           style="cursor:pointer;background-size:contain; background-color: gray; background-image: url(https://s3.amazonaws.com/storefront-assets-repository/Swatches/tri-gray.jpg)">
+                                        <input class="imageSrc" type="hidden"
+                                               value="{{ foo.image.url }}">
+                                        <input checked type="radio" data-option-index="1" name="Color"
+                                               value="Tri Gray"/>
+                                    </label>
+                                    <!-- TRUE RED PATCH? -->
+
+                                    <label class="color  number-2"
+                                           style="cursor:pointer;background-size:contain; background-color: ash; background-image: url(https://s3.amazonaws.com/storefront-assets-repository/Swatches/tri-ash.jpg)">
+                                        <input class="imageSrc" type="hidden"
+                                               value="{{ foo.image.url }}">
+                                        <input type="radio" data-option-index="1" name="Color" value="Tri Ash"/>
+                                    </label>
+                                </div>
+
+
+                                <div class="product-options-set set-3 o-6">
+                                </div>
+                            </li>
+                        </ul>
+                    </figure>
+                </div>
+                {% endfor %}
+                <!-- TRUE RED PATCH? -->
+
+            <!-- Site Map -->
+
+            <div class='home-page-sitemap'>
+
+                <style>
+
+                    .view-all a {
+                        font-weight: bold;
+                    }
+
+                    .sitemap-nav {
+                        width: 100%;
+                        text-align: center;
+                        margin: 0;
+                        padding: 0;
+                        background-color: rgba(255, 255, 255, 0.8);
+                        float: left;
+                    }
+
+                    .sitemap-nav li {
+                        display: inline-block;
+                        padding: 10px 20px;
+                    }
+
+                    .sitemap-nav a.on {
+                        font-weight: bold;
+                    }
+
+                    .sitemap-league {
+                        position: relative;
+                        clear: both;
+                    }
+
+                    .static-sitemaps ul {
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    .static-sitemaps li {
+                        list-style-type: none;
+                        margin: 0;
+                    }
+
+                    @media only screen and (max-width: 768px) {
+
+                        .sitemap-nav {
+                            background-color: white;
+                        }
+
+                    }
+
+                </style>
+
+                <!-- /templates/page.liquid -->
+                <div class="grid">
+
+
+                    <div class="static-sitemaps">
+
+
+                    </div>
+
+                </div>
+
+                <br/>
+
+
+                <script>
+
+                    $(document).ready(
+                        function () {
+
+                            var h = $('.site-header').outerHeight();
+                            var nav_height = $('.sitemap-nav').outerHeight();
+
+                            $('.sitemap-nav').sticky({
+                                offset: h,
+                                onStick: function () {
+                                    $('.sitemap-league').first().css('margin-top', nav_height + 20);
+                                },
+                                onUnstick: function () {
+                                    $('.sitemap-league').first().css('margin-top', 0);
+                                }
+                            });
+
+                            $('.sitemap-nav a').click(
+                                function () {
+
+
+                                    $('.sitemap-nav .on').removeClass('on');
+                                    $(this).addClass('on');
+
+                                    var league = $(this).attr('href').replace('#', '');
+
+                                    var $league = $('.sitemap-league.' + league);
+
+//           	$league.find('h2').fadeOut();
+// alert(h);
+                                    var t = $('.sitemap-league.' + league).offset().top - h;
+
+
+                                    $('body').stop().animate({'scrollTop': t});
+
+                                    window.open('#' + league, '_self');
+
+                                    return false;
+                                }
+                            );
+
+                        }
+                    );
+
+
+                </script>
+
+            </div>
+
+            <!-- End Site Map -->
+
+
+            <ul class="mobile-nav-inline">
+
+
+                <div class="inline-title"><span>Shop</span></div>
+
+
+                <li class="has-submenu"><a href="#Men" class="site-nav__link sub-menu">Men</a></li>
+
+
+                <li class="has-submenu"><a href="#Women" class="site-nav__link sub-menu">Women</a></li>
+
+
+                <li class="has-submenu"><a href="#Kids" class="site-nav__link sub-menu">Kids</a></li>
+
+
+                <li class="has-submenu"><a href="#Hats" class="site-nav__link sub-menu">Hats</a></li>
+
+
+                <li class="has-submenu"><a href="#Accessories" class="site-nav__link sub-menu">Accessories</a></li>
+
+
+                <div class="inline-title"><span>Learn More</span></div>
+
+
+                <li><a href="/pages/contact-us">Contact Us</a></li>
+
+
+            </ul>
+
+            <script>
+
+                jQuery(document).ready(
+                    function () {
+
+
+                        colorSwatchesList();
+                        jQuery('#homepage_slider').unslider({
+                            autoplay: true,
+                            delay: '5000',
+                            arrows: ($('#homepage_slider li').size() > 1)
+                        });
+
+
+//
+                    }
+                );
+
+
+            </script>
+
+            <!-- Use of this pixel is subject to the Amazon ad specs and policies at http://www.amazon.com/b/?&node=7253015011 --><img
+                style="display:block;" height='1' width='1' border='0' alt=''
+                src='https://s.amazon-adsystem.com/iui3?d=forester-did&ex-fargs=%3Fid%3Dc6997185-04c3-5319-8266-2ce743db7c61%26type%3D55%26m%3D1&ex-fch=416613&ex-src=https://www.500level.com/&ex-hargs=v%3D1.0%3Bc%3D1807470110201%3Bp%3DC6997185-04C3-5319-8266-2CE743DB7C61'/>
+            </div>
+        </main>
+
+        <!-- begin site-footer -->
+
+        <!-- //site-footer -->
+    </div>

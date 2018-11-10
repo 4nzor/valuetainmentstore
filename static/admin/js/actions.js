@@ -1,3 +1,4 @@
+
 /*global gettext, interpolate, ngettext*/
 (function($) {
     'use strict';
