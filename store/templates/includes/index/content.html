@@ -11,7 +11,7 @@
                 {% for foo in product %}
                 <div class="grid__item fixed-width-variable-columns product">
                     <figure class="product-image-conatiner">
-                        <a href="{% url 'product_page' %}"
+                        <a href="{% url 'product_page' foo.id %}"
                            class="link grid__image kids"><img style="width: 480px ;height: 480px;" data-n="1" class=""
                                                               src="{{ foo.image.url }}"
                                                               data-src="//cdn.shopify.com/s/files/1/2304/3009/products/Men-Premium-T-Shirt-Tri-Gray_99975a6f-1edc-4202-800c-e191564e9676_large.jpg?v=1540955338"
