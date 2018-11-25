@@ -1,3 +1,4 @@
+{% load get_images %}
 <!doctype html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="ie9 no-js"> <![endif]-->
@@ -16,15 +17,16 @@
 
     <!-- Title and description ================================================== -->
     <title>
-        Valuetainment Official Store | Patrick Bet - David | Shirts and Gear
+        Valuetainment Men&#39;s Shirts, Hoodies, &amp; Sweatshirt Apparel | 500 LEVEL &ndash; Tagged &quot;style=Men&#39;s
+        Premium T-Shirt&quot;
     </title>
 
 
     <meta name="description"
-          content="Valuetainment Official Store. Buy Officially Licensed Valuetainment Shirts, Apparel and Merchandise. Powered by 500LEVEL.">
+          content="Purchase officially licensed Valuetainment men&#39;s shirts, hoodies, and sweatshirt apparel. Show off in your Valuetainment gear at your next convention. This exclusive official apparel &amp; merchandise can be purchased in shirts, raglans, sweatshirts and hoodies. Powered by 500 LEVEL.">
 
 
-    <link href="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/semantic.css?8879239935739047236" rel="stylesheet"
+    <link href="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/semantic.css?5656582863468506585" rel="stylesheet"
           type="text/css" media="all"/>
     <script>
 
@@ -2950,7 +2952,7 @@
                                 c = !1, clearTimeout(p.performance.timer), e.each(a, function (e, t) {
                                     o += t["Execution Time"]
                                 }), t += " " + o + "ms", l && (t += " '" + l + "'"), (console.group !== n || console.table !== n) && a.length > 0 && (console.groupCollapsed(t), console.table ? console.table(a) : e.each(a, function (e, t) {
-
+                                    console.log(t.Name + ": " + t["Execution Time"] + "ms")
                                 }), console.groupEnd()), a = []
                             }
                         }, invoke: function (t, o, i) {
@@ -3842,7 +3844,7 @@
                                 u = !1, clearTimeout(y.performance.timer), e.each(d, function (e, t) {
                                     n += t["Execution Time"]
                                 }), t += " " + n + "ms", l && (t += " '" + l + "'"), (console.group !== i || console.table !== i) && d.length > 0 && (console.groupCollapsed(t), console.table ? console.table(d) : e.each(d, function (e, t) {
-
+                                    console.log(t.Name + ": " + t["Execution Time"] + "ms")
                                 }), console.groupEnd()), d = []
                             }
                         }, invoke: function (t, n, a) {
@@ -4575,216 +4577,211 @@
             })
         }(window.jQuery || window.Zepto);
 
-        var qq = 0;
+        // var qq=0;
 
 
-        (function (root, factory) {
-            if (typeof define === "function" && define.amd) {
-                define([], factory(root));
-            } else if (typeof exports === "object") {
-                module.exports = factory(root);
-            } else {
-                root.LazyLoad = factory(root);
-            }
-        })(typeof global !== "undefined" ? global : this.window || this.global, function (root) {
+        // (function (root, factory) {
+        //     if (typeof define === "function" && define.amd) {
+        //         define([], factory(root));
+        //     } else if (typeof exports === "object") {
+        //         module.exports = factory(root);
+        //     } else {
+        //         root.LazyLoad = factory(root);
+        //     }
+        // }) (typeof global !== "undefined" ? global : this.window || this.global, function (root) {
 
-            "use strict";
+        //     "use strict";
 
-            const defaults = {
-                src: "data-src",
-                srcset: "data-srcset",
-                selector: ".lazyload"
-            };
+        //     const defaults = {
+        //         src: "data-src",
+        //         srcset: "data-srcset",
+        //         selector: ".lazyload"
+        //     };
 
-            /**
-             * Merge two or more objects. Returns a new object.
-             * @private
-             * @param {Boolean}  deep     If true, do a deep (or recursive) merge [optional]
-             * @param {Object}   objects  The objects to merge together
-             * @returns {Object}          Merged values of defaults and options
-             */
-            const extend = function () {
+        //     /**
+        //     * Merge two or more objects. Returns a new object.
+        //     * @private
+        //     * @param {Boolean}  deep     If true, do a deep (or recursive) merge [optional]
+        //     * @param {Object}   objects  The objects to merge together
+        //     * @returns {Object}          Merged values of defaults and options
+        //     */
+        //     const extend = function ()  {
 
-                let extended = {};
-                let deep = false;
-                let i = 0;
-                let length = arguments.length;
+        //         let extended = {};
+        //         let deep = false;
+        //         let i = 0;
+        //         let length = arguments.length;
 
-                /* Check if a deep merge */
-                if (Object.prototype.toString.call(arguments[0]) === "[object Boolean]") {
-                    deep = arguments[0];
-                    i++;
-                }
+        //         /* Check if a deep merge */
+        //         if (Object.prototype.toString.call(arguments[0]) === "[object Boolean]") {
+        //             deep = arguments[0];
+        //             i++;
+        //         }
 
-                /* Merge the object into the extended object */
-                let merge = function (obj) {
-                    for (let prop in obj) {
-                        if (Object.prototype.hasOwnProperty.call(obj, prop)) {
-                            /* If deep merge and property is an object, merge properties */
-                            if (deep && Object.prototype.toString.call(obj[prop]) === "[object Object]") {
-                                extended[prop] = extend(true, extended[prop], obj[prop]);
-                            } else {
-                                extended[prop] = obj[prop];
-                            }
-                        }
-                    }
-                };
+        //         /* Merge the object into the extended object */
+        //         let merge = function (obj) {
+        //             for (let prop in obj) {
+        //                 if (Object.prototype.hasOwnProperty.call(obj, prop)) {
+        //                     /* If deep merge and property is an object, merge properties */
+        //                     if (deep && Object.prototype.toString.call(obj[prop]) === "[object Object]") {
+        //                         extended[prop] = extend(true, extended[prop], obj[prop]);
+        //                     } else {
+        //                         extended[prop] = obj[prop];
+        //                     }
+        //                 }
+        //             }
+        //         };
 
-                /* Loop through each object and conduct a merge */
-                for (; i < length; i++) {
-                    let obj = arguments[i];
-                    merge(obj);
-                }
+        //         /* Loop through each object and conduct a merge */
+        //         for (; i < length; i++) {
+        //             let obj = arguments[i];
+        //             merge(obj);
+        //         }
 
-                return extended;
-            };
+        //         return extended;
+        //     };
 
-            function LazyLoad(images, options) {
-                this.settings = extend(defaults, options || {});
-                this.images = images || document.querySelectorAll(this.settings.selector);
-                this.observer = null;
-                this.init();
-            }
+        //     function LazyLoad(images, options) {
+        //         this.settings = extend(defaults, options || {});
+        //         this.images = images || document.querySelectorAll(this.settings.selector);
+        //         this.observer = null;
+        //         this.init();
+        //     }
 
-            LazyLoad.prototype = {
-                init: function () {
+        //     LazyLoad.prototype = {
+        //         init: function() {
 
-                    /* Without observers load everything and bail out early. */
-                    if (!root.IntersectionObserver) {
-                        this.loadImages();
-                        return;
-                    }
+        //             /* Without observers load everything and bail out early. */
+        //             if (!root.IntersectionObserver) {
+        //                 this.loadImages();
+        //                 return;
+        //             }
 
-                    let self = this;
-                    let observerConfig = {
-                        root: null,
-                        rootMargin: "0px",
-                        threshold: [0]
-                    };
+        //             let self = this;
+        //             let observerConfig = {
+        //                 root: null,
+        //                 rootMargin: "0px",
+        //                 threshold: [0]
+        //             };
 
-                    this.observer = new IntersectionObserver(function (entries) {
-                        entries.forEach(function (entry) {
-                            if (entry.intersectionRatio > 0) {
-                                self.observer.unobserve(entry.target);
-                                let src = entry.target.getAttribute(self.settings.src);
-                                let srcset = entry.target.getAttribute(self.settings.srcset);
-                                if ("img" === entry.target.tagName.toLowerCase()) {
-                                    if (src) {
-
-
-                                        if (++qq == 5) return;
-
-                                        entry.target.src = src;
-                                        // FADEIN HACK
-                                        entry.target.style.opacity = 0;
-                                        fadeInJS(entry.target, src);
-
-                                        if (jQuery(entry.target).hasClass('loaded')) return;
-
-                                        if (qq == 7) return;
-
-                                        var img = new Image();
-                                        img.src = src;
-
-                                        jQuery(img).load(
-                                            function () {
-
-                                                jQuery(entry.target).fadeOut(
-                                                    function () {
-
-                                                        entry.target.src = src;
-                                                        jQuery(entry.target).addClass('loaded');
-
-                                                        jQuery(entry.target).fadeIn();
-
-                                                    }
-                                                );
+        //             this.observer = new IntersectionObserver(function(entries) {
+        //                 entries.forEach(function (entry) {
+        //                     if (entry.intersectionRatio > 0) {
+        //                         self.observer.unobserve(entry.target);
+        //                         let src = entry.target.getAttribute(self.settings.src);
+        //                         let srcset = entry.target.getAttribute(self.settings.srcset);
+        //                         if ("img" === entry.target.tagName.toLowerCase()) {
+        //                             if (src) {
 
 
-                                            }
-                                        );
+        //                               if(++qq==5) return;
+        //                               console.log(jQuery(entry.target).attr("data-n"));
+
+        // //                                 entry.target.src = src;
+        //                               	// FADEIN HACK
+        // //                                 entry.target.style.opacity = 0;
+        // //                               	fadeInJS(entry.target,src);
+
+        //                               if(jQuery(entry.target).hasClass('loaded')) return;
+        // //
+        // //                               if(qq==7) return;
+
+        //                               var img=new Image();
+        //                               img.src=src;
+
+        //                               jQuery(img).load(
+        //                                 function(){
+
+        //                                   jQuery(entry.target).fadeOut(
+        //                                     function(){
+
+        //                                       entry.target.src = src;
+        //                                       jQuery(entry.target).addClass('loaded');
+
+        //                                       jQuery(entry.target).fadeIn();
+
+        //                                     }
+        //                                   );
 
 
-                                        //
-                                    }
-                                    if (srcset) {
-                                        entry.target.srcset = srcset;
-                                    }
-                                } else {
-                                    entry.target.style.backgroundImage = "url(" + src + ")";
-                                }
-                            }
-                        });
-                    }, observerConfig);
+        //                                 }
+        //                               );
 
-                    this.images.forEach(function (image) {
-                        self.observer.observe(image);
-                    });
-                },
 
-                loadAndDestroy: function () {
-                    if (!this.settings) {
-                        return;
-                    }
-                    this.loadImages();
-                    this.destroy();
-                },
+        //                                 //
+        //                             }
+        //                             if (srcset) {
+        //                                 entry.target.srcset = srcset;
+        //                             }
+        //                         } else {
+        //                             entry.target.style.backgroundImage = "url(" + src + ")";
+        //                         }
+        //                     }
+        //                 });
+        //             }, observerConfig);
 
-                loadImages: function () {
-                    if (!this.settings) {
-                        return;
-                    }
+        //             this.images.forEach(function (image) {
+        //                 self.observer.observe(image);
+        //             });
+        //         },
 
-                    let self = this;
-                    this.images.forEach(function (image) {
-                        let src = image.getAttribute(self.settings.src);
-                        let srcset = image.getAttribute(self.settings.srcset);
-                        if ("img" === image.tagName.toLowerCase()) {
-                            if (src) {
-                                image.src = src;
-                            }
-                            if (srcset) {
-                                image.srcset = srcset;
-                            }
-                        } else {
-                            image.style.backgroundImage = "url(" + src + ")";
-                        }
-                    });
-                },
+        //         loadAndDestroy: function () {
+        //             if (!this.settings) { return; }
+        //             this.loadImages();
+        //             this.destroy();
+        //         },
 
-                destroy: function () {
-                    if (!this.settings) {
-                        return;
-                    }
-                    this.observer.disconnect();
-                    this.settings = null;
-                }
-            };
+        //         loadImages: function () {
+        //             if (!this.settings) { return; }
 
-            root.lazyload = function (images, options) {
-                return new LazyLoad(images, options);
-            };
+        //             let self = this;
+        //             this.images.forEach(function (image) {
+        //                 let src = image.getAttribute(self.settings.src);
+        //                 let srcset = image.getAttribute(self.settings.srcset);
+        //                 if ("img" === image.tagName.toLowerCase()) {
+        //                     if (src) {
+        //                         image.src = src;
+        //                     }
+        //                     if (srcset) {
+        //                         image.srcset = srcset;
+        //                     }
+        //                 } else {
+        //                     image.style.backgroundImage = "url(" + src + ")";
+        //                 }
+        //             });
+        //         },
 
-            if (window.jQuery) {
-                const $ = window.jQuery;
-                $.fn.lazyload = function (options) {
-                    options = options || {};
-                    options.attribute = options.attribute || "data-src";
-                    new LazyLoad($.makeArray(this), options);
-                    return this;
-                };
-            }
+        //         destroy: function () {
+        //             if (!this.settings) { return; }
+        //             this.observer.disconnect();
+        //             this.settings = null;
+        //         }
+        //     };
 
-            return LazyLoad;
-        });
+        //     root.lazyload = function(images, options) {
+        //         return new LazyLoad(images, options);
+        //     };
+
+        //     if (window.jQuery) {
+        //         const $ = window.jQuery;
+        //         $.fn.lazyload = function (options) {
+        //             options = options || {};
+        //             options.attribute = options.attribute || "data-src";
+        //             new LazyLoad($.makeArray(this), options);
+        //             return this;
+        //         };
+        //     }
+
+        //     return LazyLoad;
+        // });
 
     </script>
 
 
     <!-- Custom Fonts -->
-    <link href="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/open-sans-condensed.css?8879239935739047236"
+    <link href="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/open-sans-condensed.css?5656582863468506585"
           rel="stylesheet" type="text/css" media="all"/>
-    <link href="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/open-sans.css?8879239935739047236" rel="stylesheet"
+    <link href="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/open-sans.css?5656582863468506585" rel="stylesheet"
           type="text/css" media="all"/>
 
     <!-- Helpers ================================================== -->
@@ -4792,18 +4789,18 @@
 
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Valuetainment Official Store | Patrick Bet - David | Shirts and Gear">
+    <meta property="og:title" content="Valuetainment Men&#39;s Shirts, Hoodies, &amp; Sweatshirt Apparel | 500 LEVEL">
 
     <meta property="og:image"
-          content="http://cdn.shopify.com/s/files/1/2304/3009/t/6/assets/logo.png?8879239935739047236">
+          content="http://cdn.shopify.com/s/files/1/2304/3009/t/6/assets/logo.png?5656582863468506585">
     <meta property="og:image:secure_url"
-          content="https://cdn.shopify.com/s/files/1/2304/3009/t/6/assets/logo.png?8879239935739047236">
+          content="https://cdn.shopify.com/s/files/1/2304/3009/t/6/assets/logo.png?5656582863468506585">
 
 
     <meta property="og:description"
-          content="Valuetainment Official Store. Buy Officially Licensed Valuetainment Shirts, Apparel and Merchandise. Powered by 500LEVEL.">
+          content="Purchase officially licensed Valuetainment men&#39;s shirts, hoodies, and sweatshirt apparel. Show off in your Valuetainment gear at your next convention. This exclusive official apparel &amp; merchandise can be purchased in shirts, raglans, sweatshirts and hoodies. Powered by 500 LEVEL.">
 
-    <meta property="og:url" content="https://www.valuetainmentstore.com/">
+    <meta property="og:url" content="https://www.valuetainmentstore.com/collections/men/style-mens-premium-t-shirt">
     <meta property="og:site_name" content="Valuetainment">
 
 
@@ -4812,7 +4809,7 @@
     <meta name="twitter:card" content="summary">
 
 
-    <link rel="canonical" href="https://www.valuetainmentstore.com/">
+    <link rel="canonical" href="https://www.valuetainmentstore.com/collections/men/style-mens-premium-t-shirt">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
     <meta name="theme-color" content="#6e6e6e">
@@ -5073,15 +5070,15 @@
 
     </style>
 
-    <link href="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/roboto.css?8879239935739047236" rel="stylesheet"
+    <link href="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/roboto.css?5656582863468506585" rel="stylesheet"
           type="text/css" media="all"/>
     <!-- CSS ================================================== -->
-    <link href="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/500level.scss.css?8879239935739047236" rel="stylesheet"
+    <link href="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/500level.scss.css?5656582863468506585" rel="stylesheet"
           type="text/css" media="all"/>
 
 
     <!-- Header hook for plugins ================================================== -->
-
+    <meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/23043009/digital_wallets/dialog">
     <meta name="shopify-checkout-api-token" content="eb377f0760099323ec19a333b70e20bb">
     <meta id="in-context-paypal-metadata" data-shop-id="23043009" data-environment="production" data-locale="en_US"
           data-paypal-v4="true" data-currency="USD">
@@ -5091,6 +5088,11 @@
           data-amazon-payments-client-id="amzn1.application-oa2-client.28f910719c3b48b5acf003adc1f437fe"
           data-amazon-payments-region="US" data-amazon-payments-language="en-US"
           data-amazon-payments-widget-library-url="https://static-na.payments-amazon.com/OffAmazonPayments/us/js/Widgets.js">
+    <link rel="alternate" type="application/atom+xml" title="Feed"
+          href="/collections/men/style-mens-premium-t-shirt.atom"/>
+    <link rel="next" href="/collections/men/style-mens-premium-t-shirt?page=2">
+    <link rel="alternate" type="application/json+oembed"
+          href="https://www.valuetainmentstore.com/collections/men/style-mens-premium-t-shirt.oembed">
     <style media="all">.additional-checkout-button {
         border: 0 !important;
         border-radius: 5px !important;
@@ -5295,10 +5297,6 @@
     <script>var Shopify = Shopify || {};
     Shopify.shop = "valuetainment.myshopify.com";
     Shopify.currency = {"active": "USD"};
-    Shopify.shopToPresentmentPrice = function (price) {
-        var new_price = 1.0 * price;
-        return new_price.toFixed(2);
-    };
     Shopify.theme = {"name": "storefront-theme-5-5", "id": 35915923515, "theme_store_id": null, "role": "main"};
     Shopify.theme.handle = "null";
     Shopify.theme.style = {"id": null, "handle": null};</script>
@@ -5308,10 +5306,12 @@
     <script id="__st">var __st = {
         "a": 23043009,
         "offset": -21600,
-        "reqid": "f5ef1850-d936-4a53-8424-106d867a6fe0",
-        "pageurl": "www.valuetainmentstore.com\/",
-        "u": "16418bd34f73",
-        "p": "home"
+        "reqid": "e60cec61-f903-491e-a65c-7dad7033a793",
+        "pageurl": "www.valuetainmentstore.com\/collections\/men\/style-mens-premium-t-shirt",
+        "u": "0cd276b15bee",
+        "p": "collection",
+        "rtyp": "collection",
+        "rid": 1431502873
     };</script>
     <script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
     <script>window.Shopify = window.Shopify || {};
@@ -5320,7 +5320,7 @@
     <script>window.ShopifyAnalytics = window.ShopifyAnalytics || {};
     window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
     window.ShopifyAnalytics.meta.currency = 'USD';
-    var meta = {"page": {"pageType": "home"}};
+    var meta = {"page": {"pageType": "collection", "resourceType": "collection", "resourceId": 1431502873}};
     for (var attr in meta) {
         window.ShopifyAnalytics.meta[attr] = meta[attr];
     }</script>
@@ -5388,7 +5388,7 @@
                         "shopId": 23043009,
                         "isMerchantRequest": null,
                         "themeId": 35915923515,
-                        "themeCityHash": 2001610493737976640
+                        "themeCityHash": 10691477492206414493
                     }
                 },
                 "Performance": {
@@ -5420,9 +5420,14 @@
 
             window.ShopifyAnalytics.lib.page(
                 null,
-                {"pageType": "home"}
+                {"pageType": "collection", "resourceType": "collection", "resourceId": 1431502873}
             );
 
+
+            window.ShopifyAnalytics.lib.track(
+                "Viewed Product Category",
+                {"category": "Collection: men", "nonInteraction": true}
+            );
 
         });
 
@@ -5435,8 +5440,8 @@
     })();</script>
     <script crossorigin="anonymous" defer="defer"
             src="//cdn.shopify.com/s/assets/shopify_pay/storefront-fe31d6a6f8b299bf1d018618c066f4704f961ac0b1939d90d804f157451c6312.js?v=20181030"></script>
-    <script integrity="sha256-/hmvj0IimPh8mlgYqo1p0Wr3Jt84KR7FQYjY+XiKZZo=" defer="defer"
-            src="//cdn.shopify.com/s/assets/storefront/express_buttons-fe19af8f422298f87c9a5818aa8d69d16af726df38291ec54188d8f9788a659a.js"
+    <script integrity="sha256-b8j1JKsr6ukm2158PeoGRsKny4Rg4wQhQ/c9O9gTbpk=" defer="defer"
+            src="//cdn.shopify.com/s/assets/storefront/express_buttons-6fc8f524ab2beae926db5e7c3dea0646c2a7cb8460e3042143f73d3bd8136e99.js"
             crossorigin="anonymous"></script>
     <script integrity="sha256-NfqRkSQwKw0JfNupCky6Zxtoijw8YUA8km/3gYu7kY8=" defer="defer"
             src="//cdn.shopify.com/s/assets/storefront/features-35fa919124302b0d097cdba90a4cba671b688a3c3c61403c926ff7818bbb918f.js"
@@ -5456,7 +5461,7 @@
     };
 
     window.BOLD.common.Shopify.cart = {
-        "token": "5cc892826f47bf47cf6ab57089414022",
+        "token": "97bd2a837e0420fca13bf3850dd9afe0",
         "note": null,
         "attributes": {},
         "original_total_price": 0,
@@ -5468,7 +5473,7 @@
         "requires_shipping": false,
         "currency": "USD"
     };
-    window.BOLD.common.template = 'index';
+    window.BOLD.common.template = 'collection.search';
     window.BOLD.common.Shopify.formatMoney = function (money, format) {
         function n(t, e) {
             return 'undefined' == typeof t ? e : t
@@ -5533,6 +5538,564 @@
     window.BOLD.common.Shopify.products = window.BOLD.common.Shopify.products || {};
     window.BOLD.common.Shopify.variants = window.BOLD.common.Shopify.variants || {};
     window.BOLD.common.Shopify.handles = window.BOLD.common.Shopify.handles || {};
+    window.BOLD.common.Shopify.saveProduct(null, null);
+    window.BOLD.common.Shopify.saveProduct("valuetainment-t-shirt-valuetainment-companies-13", 1828996317243);
+    window.BOLD.common.Shopify.saveVariant(17850811088955, {product_id: 1828996317243, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850811121723, {product_id: 1828996317243, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850811154491, {product_id: 1828996317243, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850811187259, {product_id: 1828996317243, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850811220027, {product_id: 1828996317243, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850811252795, {product_id: 1828996317243, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850811285563, {product_id: 1828996317243, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850811318331, {product_id: 1828996317243, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850811351099, {product_id: 1828996317243, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850811383867, {product_id: 1828996317243, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850811416635, {product_id: 1828996317243, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850811449403, {product_id: 1828996317243, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850811482171, {product_id: 1828996317243, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850811514939, {product_id: 1828996317243, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850811547707, {product_id: 1828996317243, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850811580475, {product_id: 1828996317243, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850811613243, {product_id: 1828996317243, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850811646011, {product_id: 1828996317243, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("valuetainment-t-shirt-valuetainment-companies-12", 1828993368123);
+    window.BOLD.common.Shopify.saveVariant(17850760331323, {product_id: 1828993368123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850760364091, {product_id: 1828993368123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850760396859, {product_id: 1828993368123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850760429627, {product_id: 1828993368123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850760462395, {product_id: 1828993368123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850760527931, {product_id: 1828993368123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850760560699, {product_id: 1828993368123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850760593467, {product_id: 1828993368123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850760626235, {product_id: 1828993368123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850760659003, {product_id: 1828993368123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850760691771, {product_id: 1828993368123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850760724539, {product_id: 1828993368123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("patrick-bet-david-t-shirt-valuetainment-companies-23", 1825932640315);
+    window.BOLD.common.Shopify.saveVariant(17804983042107, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804983140411, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804983205947, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804983337019, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804983402555, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804983468091, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804983566395, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804983664699, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804983730235, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804983795771, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804983926843, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804984057915, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804984221755, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804984385595, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804984516667, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804984647739, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804984746043, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804984909883, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804984975419, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804985040955, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804985106491, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804985204795, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804985237563, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804985335867, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804985401403, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804985434171, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804985532475, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804985565243, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804985598011, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804985663547, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804985729083, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804985761851, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804985794619, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804985827387, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804985860155, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804985892923, {product_id: 1825932640315, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("patrick-bet-david-t-shirt-valuetainment-companies-26", 1825917534267);
+    window.BOLD.common.Shopify.saveVariant(17804800262203, {product_id: 1825917534267, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804800294971, {product_id: 1825917534267, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804800327739, {product_id: 1825917534267, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804800360507, {product_id: 1825917534267, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804800393275, {product_id: 1825917534267, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804800426043, {product_id: 1825917534267, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804800458811, {product_id: 1825917534267, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804800491579, {product_id: 1825917534267, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804800524347, {product_id: 1825917534267, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804800557115, {product_id: 1825917534267, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804800622651, {product_id: 1825917534267, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804800655419, {product_id: 1825917534267, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("valuetainment-t-shirt-valuetainment-companies-15", 1829001560123);
+    window.BOLD.common.Shopify.saveVariant(17850903527483, {product_id: 1829001560123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850903658555, {product_id: 1829001560123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850903789627, {product_id: 1829001560123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850903920699, {product_id: 1829001560123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850904051771, {product_id: 1829001560123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850904182843, {product_id: 1829001560123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("valuetainment-t-shirt-valuetainment-companies-14", 1828999233595);
+    window.BOLD.common.Shopify.saveVariant(17850863845435, {product_id: 1828999233595, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850863910971, {product_id: 1828999233595, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850863943739, {product_id: 1828999233595, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850863976507, {product_id: 1828999233595, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850864042043, {product_id: 1828999233595, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850864074811, {product_id: 1828999233595, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850864107579, {product_id: 1828999233595, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850864173115, {product_id: 1828999233595, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850864205883, {product_id: 1828999233595, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850864238651, {product_id: 1828999233595, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850864304187, {product_id: 1828999233595, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850864336955, {product_id: 1828999233595, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("valuetainment-t-shirt-valuetainment-companies-11", 1828990615611);
+    window.BOLD.common.Shopify.saveVariant(17850710163515, {product_id: 1828990615611, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850710229051, {product_id: 1828990615611, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850710294587, {product_id: 1828990615611, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850710360123, {product_id: 1828990615611, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850710425659, {product_id: 1828990615611, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850710458427, {product_id: 1828990615611, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850710491195, {product_id: 1828990615611, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850710523963, {product_id: 1828990615611, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850710556731, {product_id: 1828990615611, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850710589499, {product_id: 1828990615611, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850710622267, {product_id: 1828990615611, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850710655035, {product_id: 1828990615611, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850710720571, {product_id: 1828990615611, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850710753339, {product_id: 1828990615611, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850710786107, {product_id: 1828990615611, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850710818875, {product_id: 1828990615611, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850710851643, {product_id: 1828990615611, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850710884411, {product_id: 1828990615611, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("valuetainment-t-shirt-valuetainment-companies-10", 1828987338811);
+    window.BOLD.common.Shopify.saveVariant(17850655801403, {product_id: 1828987338811, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850655866939, {product_id: 1828987338811, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850655899707, {product_id: 1828987338811, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850655965243, {product_id: 1828987338811, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850655998011, {product_id: 1828987338811, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850656063547, {product_id: 1828987338811, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850656129083, {product_id: 1828987338811, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850656161851, {product_id: 1828987338811, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850656227387, {product_id: 1828987338811, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850656358459, {product_id: 1828987338811, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850656489531, {product_id: 1828987338811, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850656555067, {product_id: 1828987338811, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("valuetainment-t-shirt-valuetainment-companies-09", 1828985274427);
+    window.BOLD.common.Shopify.saveVariant(17850611597371, {product_id: 1828985274427, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850611761211, {product_id: 1828985274427, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850611892283, {product_id: 1828985274427, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850612056123, {product_id: 1828985274427, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850612154427, {product_id: 1828985274427, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850613334075, {product_id: 1828985274427, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850613399611, {product_id: 1828985274427, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850613465147, {product_id: 1828985274427, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850613530683, {product_id: 1828985274427, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850613596219, {product_id: 1828985274427, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850613661755, {product_id: 1828985274427, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850613760059, {product_id: 1828985274427, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("valuetainment-t-shirt-valuetainment-companies-08", 1828982554683);
+    window.BOLD.common.Shopify.saveVariant(17850562215995, {product_id: 1828982554683, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850562248763, {product_id: 1828982554683, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850562281531, {product_id: 1828982554683, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850562314299, {product_id: 1828982554683, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850562347067, {product_id: 1828982554683, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850562379835, {product_id: 1828982554683, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850562412603, {product_id: 1828982554683, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850562445371, {product_id: 1828982554683, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850562478139, {product_id: 1828982554683, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850562510907, {product_id: 1828982554683, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850562543675, {product_id: 1828982554683, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850562576443, {product_id: 1828982554683, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850562609211, {product_id: 1828982554683, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850562641979, {product_id: 1828982554683, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850562674747, {product_id: 1828982554683, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850562740283, {product_id: 1828982554683, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850562805819, {product_id: 1828982554683, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850562871355, {product_id: 1828982554683, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("valuetainment-t-shirt-valuetainment-companies-07", 1828979179579);
+    window.BOLD.common.Shopify.saveVariant(17850515324987, {product_id: 1828979179579, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850515357755, {product_id: 1828979179579, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850515390523, {product_id: 1828979179579, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850515423291, {product_id: 1828979179579, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850515456059, {product_id: 1828979179579, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850515488827, {product_id: 1828979179579, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850515521595, {product_id: 1828979179579, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850515554363, {product_id: 1828979179579, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850515587131, {product_id: 1828979179579, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850515619899, {product_id: 1828979179579, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850515652667, {product_id: 1828979179579, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850515685435, {product_id: 1828979179579, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("valuetainment-t-shirt-valuetainment-companies-06", 1828976132155);
+    window.BOLD.common.Shopify.saveVariant(17850466074683, {product_id: 1828976132155, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850466107451, {product_id: 1828976132155, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850466140219, {product_id: 1828976132155, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850466172987, {product_id: 1828976132155, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850466205755, {product_id: 1828976132155, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850466238523, {product_id: 1828976132155, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850466271291, {product_id: 1828976132155, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850466304059, {product_id: 1828976132155, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850466336827, {product_id: 1828976132155, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850466369595, {product_id: 1828976132155, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850466402363, {product_id: 1828976132155, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850466435131, {product_id: 1828976132155, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850466467899, {product_id: 1828976132155, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850466500667, {product_id: 1828976132155, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850466533435, {product_id: 1828976132155, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850466566203, {product_id: 1828976132155, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850466598971, {product_id: 1828976132155, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850466631739, {product_id: 1828976132155, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("valuetainment-t-shirt-valuetainment-companies-05", 1828972888123);
+    window.BOLD.common.Shopify.saveVariant(17850417250363, {product_id: 1828972888123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850417348667, {product_id: 1828972888123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850417414203, {product_id: 1828972888123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850417479739, {product_id: 1828972888123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850417545275, {product_id: 1828972888123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850417578043, {product_id: 1828972888123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850417643579, {product_id: 1828972888123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850417741883, {product_id: 1828972888123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850417807419, {product_id: 1828972888123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850417840187, {product_id: 1828972888123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850417905723, {product_id: 1828972888123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17850417971259, {product_id: 1828972888123, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("patrick-bet-david-t-shirt-valuetainment-companies-22", 1825928937531);
+    window.BOLD.common.Shopify.saveVariant(17804925534267, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804925567035, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804925599803, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804925632571, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804925665339, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804925698107, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804925730875, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804925796411, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804925861947, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804925894715, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804925960251, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804926025787, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804926091323, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804926156859, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804926222395, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804926287931, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804926320699, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804926353467, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804926386235, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804926419003, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804926451771, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804926484539, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804926517307, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804926550075, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804926582843, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804926615611, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804926648379, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804926681147, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804926713915, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804926746683, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804926779451, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804926812219, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804926844987, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804926877755, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804926910523, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804926943291, {product_id: 1825928937531, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("patrick-bet-david-t-shirt-valuetainment-companies-21", 1825923727419);
+    window.BOLD.common.Shopify.saveVariant(17804862980155, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804863045691, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804863143995, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804863242299, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804863307835, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804863406139, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804863471675, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804863569979, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804863635515, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804863701051, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804863799355, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804863897659, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804864028731, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804864094267, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804864159803, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804864225339, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804864290875, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804864356411, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804864454715, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804864520251, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804864585787, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804864684091, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804864749627, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804864782395, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804864815163, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804864847931, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804864880699, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804864913467, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804864946235, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804864979003, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804865044539, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804865110075, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804865142843, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804865208379, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804865273915, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804865306683, {product_id: 1825923727419, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("patrick-bet-david-t-shirt-valuetainment-companies-17", 1825914847291);
+    window.BOLD.common.Shopify.saveVariant(17804780666939, {product_id: 1825914847291, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804780699707, {product_id: 1825914847291, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804780732475, {product_id: 1825914847291, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804780765243, {product_id: 1825914847291, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804780798011, {product_id: 1825914847291, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804780830779, {product_id: 1825914847291, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804780863547, {product_id: 1825914847291, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804780896315, {product_id: 1825914847291, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804780929083, {product_id: 1825914847291, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804780961851, {product_id: 1825914847291, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804780994619, {product_id: 1825914847291, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804781027387, {product_id: 1825914847291, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("patrick-bet-david-t-shirt-valuetainment-companies-20", 1825910947899);
+    window.BOLD.common.Shopify.saveVariant(17804738658363, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804738691131, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804738723899, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804738789435, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804738822203, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804738854971, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804738887739, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804738920507, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804738953275, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804738986043, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804739018811, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804739051579, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804739084347, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804739117115, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804739149883, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804739182651, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804739248187, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804739313723, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804739379259, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804739444795, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804739477563, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804739543099, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804739608635, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804739641403, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804739706939, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804739805243, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804739870779, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804739969083, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804740034619, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804740067387, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804740132923, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804740198459, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804740263995, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804740296763, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804740362299, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804740427835, {product_id: 1825910947899, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("patrick-bet-david-t-shirt-valuetainment-companies-11", 1825905639483);
+    window.BOLD.common.Shopify.saveVariant(17804695535675, {product_id: 1825905639483, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804695601211, {product_id: 1825905639483, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804695699515, {product_id: 1825905639483, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804695765051, {product_id: 1825905639483, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804695830587, {product_id: 1825905639483, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804695863355, {product_id: 1825905639483, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("patrick-bet-david-t-shirt-valuetainment-companies-19", 1825901871163);
+    window.BOLD.common.Shopify.saveVariant(17804658475067, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804658507835, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804658540603, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804658573371, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804658606139, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804658638907, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804658671675, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804658704443, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804658737211, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804658769979, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804658802747, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804658835515, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804658868283, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804658933819, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804658966587, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804658999355, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804659032123, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804659064891, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804659097659, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804659130427, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804659163195, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804659195963, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804659228731, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804659261499, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804659294267, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804659327035, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804659359803, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804659392571, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804659425339, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804659458107, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804659490875, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804659523643, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804659556411, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804659589179, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804659621947, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804659654715, {product_id: 1825901871163, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("patrick-bet-david-t-shirt-valuetainment-companies-18", 1825895448635);
+    window.BOLD.common.Shopify.saveVariant(17804578881595, {product_id: 1825895448635, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804578947131, {product_id: 1825895448635, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804579012667, {product_id: 1825895448635, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804579078203, {product_id: 1825895448635, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804579143739, {product_id: 1825895448635, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804579242043, {product_id: 1825895448635, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804579307579, {product_id: 1825895448635, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804579340347, {product_id: 1825895448635, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804579373115, {product_id: 1825895448635, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804579405883, {product_id: 1825895448635, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804579438651, {product_id: 1825895448635, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804579471419, {product_id: 1825895448635, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804579504187, {product_id: 1825895448635, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804579536955, {product_id: 1825895448635, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804579569723, {product_id: 1825895448635, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804579602491, {product_id: 1825895448635, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804579635259, {product_id: 1825895448635, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804579668027, {product_id: 1825895448635, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("patrick-bet-david-t-shirt-valuetainment-companies-10", 1825890041915);
+    window.BOLD.common.Shopify.saveVariant(17804524093499, {product_id: 1825890041915, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804524126267, {product_id: 1825890041915, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804524159035, {product_id: 1825890041915, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804524191803, {product_id: 1825890041915, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804524224571, {product_id: 1825890041915, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804524257339, {product_id: 1825890041915, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804524290107, {product_id: 1825890041915, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804524322875, {product_id: 1825890041915, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804524355643, {product_id: 1825890041915, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804524388411, {product_id: 1825890041915, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804524421179, {product_id: 1825890041915, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804524453947, {product_id: 1825890041915, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804524486715, {product_id: 1825890041915, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804524519483, {product_id: 1825890041915, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804524552251, {product_id: 1825890041915, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804524585019, {product_id: 1825890041915, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804524617787, {product_id: 1825890041915, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804524650555, {product_id: 1825890041915, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("patrick-bet-david-t-shirt-valuetainment-companies-09", 1825886994491);
+    window.BOLD.common.Shopify.saveVariant(17804496764987, {product_id: 1825886994491, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804496896059, {product_id: 1825886994491, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804496994363, {product_id: 1825886994491, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804497092667, {product_id: 1825886994491, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804497158203, {product_id: 1825886994491, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804497223739, {product_id: 1825886994491, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("patrick-bet-david-t-shirt-valuetainment-companies-08", 1825884569659);
+    window.BOLD.common.Shopify.saveVariant(17804475334715, {product_id: 1825884569659, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804475367483, {product_id: 1825884569659, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804475400251, {product_id: 1825884569659, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804475433019, {product_id: 1825884569659, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804475465787, {product_id: 1825884569659, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804475498555, {product_id: 1825884569659, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("patrick-bet-david-t-shirt-valuetainment-companies-16", 1825881227323);
+    window.BOLD.common.Shopify.saveVariant(17804442566715, {product_id: 1825881227323, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804442599483, {product_id: 1825881227323, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804442632251, {product_id: 1825881227323, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804442665019, {product_id: 1825881227323, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804442697787, {product_id: 1825881227323, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804442730555, {product_id: 1825881227323, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804442763323, {product_id: 1825881227323, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804442828859, {product_id: 1825881227323, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804442861627, {product_id: 1825881227323, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804442894395, {product_id: 1825881227323, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804442927163, {product_id: 1825881227323, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804442959931, {product_id: 1825881227323, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("patrick-bet-david-t-shirt-valuetainment-companies-05", 1825878212667);
+    window.BOLD.common.Shopify.saveVariant(17804421398587, {product_id: 1825878212667, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804421431355, {product_id: 1825878212667, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804421496891, {product_id: 1825878212667, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804421562427, {product_id: 1825878212667, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804421627963, {product_id: 1825878212667, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804421693499, {product_id: 1825878212667, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804421824571, {product_id: 1825878212667, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804421922875, {product_id: 1825878212667, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804422021179, {product_id: 1825878212667, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804422086715, {product_id: 1825878212667, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804422152251, {product_id: 1825878212667, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804422217787, {product_id: 1825878212667, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("patrick-bet-david-t-shirt-valuetainment-companies-04", 1825874214971);
+    window.BOLD.common.Shopify.saveVariant(17804383125563, {product_id: 1825874214971, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804383158331, {product_id: 1825874214971, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804383223867, {product_id: 1825874214971, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804383289403, {product_id: 1825874214971, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804383354939, {product_id: 1825874214971, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804383486011, {product_id: 1825874214971, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804383584315, {product_id: 1825874214971, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804383649851, {product_id: 1825874214971, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804383682619, {product_id: 1825874214971, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804383715387, {product_id: 1825874214971, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804383748155, {product_id: 1825874214971, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804383780923, {product_id: 1825874214971, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804383813691, {product_id: 1825874214971, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804383846459, {product_id: 1825874214971, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804383879227, {product_id: 1825874214971, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804383911995, {product_id: 1825874214971, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804383944763, {product_id: 1825874214971, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804383977531, {product_id: 1825874214971, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("patrick-bet-david-t-shirt-valuetainment-companies-03", 1825871036475);
+    window.BOLD.common.Shopify.saveVariant(17804351143995, {product_id: 1825871036475, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804351176763, {product_id: 1825871036475, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804351209531, {product_id: 1825871036475, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804351242299, {product_id: 1825871036475, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804351275067, {product_id: 1825871036475, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804351307835, {product_id: 1825871036475, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("patrick-bet-david-t-shirt-valuetainment-companies-27", 1825866907707);
+    window.BOLD.common.Shopify.saveVariant(17804314017851, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804314050619, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804314083387, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804314116155, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804314181691, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804314247227, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804314279995, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804314312763, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804314345531, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804314378299, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804314411067, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804314443835, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804314476603, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804314574907, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804314640443, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804314705979, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804314771515, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804314869819, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804314968123, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804315033659, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804315131963, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804315197499, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804315263035, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804315361339, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804315426875, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804315492411, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804315557947, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804315623483, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804315689019, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804315754555, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804315820091, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804315885627, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804315983931, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804316082235, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804316147771, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804316213307, {product_id: 1825866907707, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("patrick-bet-david-t-shirt-valuetainment-companies-24", 1825860354107);
+    window.BOLD.common.Shopify.saveVariant(17804243402811, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804243468347, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804243533883, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804243599419, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804243664955, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804243730491, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804243828795, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804243894331, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804243959867, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804244025403, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804244123707, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804244222011, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804244287547, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804244418619, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804244484155, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804244549691, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804244615227, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804244713531, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804244779067, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804244844603, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804244942907, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804245008443, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804245073979, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804245139515, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804245205051, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804245270587, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804245303355, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804245401659, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804245467195, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804245565499, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804245631035, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804245729339, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804245762107, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804245860411, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804245925947, {product_id: 1825860354107, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804245991483, {product_id: 1825860354107, price: 2499, group_id: ''});
     window.BOLD.common.Shopify.saveProduct("patrick-bet-david-t-shirt-valuetainment-companies-25", 1825854390331);
     window.BOLD.common.Shopify.saveVariant(17804177965115, {product_id: 1825854390331, price: 2499, group_id: ''});
     window.BOLD.common.Shopify.saveVariant(17804177997883, {product_id: 1825854390331, price: 2499, group_id: ''});
@@ -5552,40 +6115,97 @@
     window.BOLD.common.Shopify.saveVariant(17804178882619, {product_id: 1825854390331, price: 2499, group_id: ''});
     window.BOLD.common.Shopify.saveVariant(17804178915387, {product_id: 1825854390331, price: 2499, group_id: ''});
     window.BOLD.common.Shopify.saveVariant(17804178980923, {product_id: 1825854390331, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("patrick-bet-david-t-shirt-valuetainment-companies-02", 1825849868347);
+    window.BOLD.common.Shopify.saveVariant(17804118327355, {product_id: 1825849868347, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804118425659, {product_id: 1825849868347, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804118491195, {product_id: 1825849868347, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804118556731, {product_id: 1825849868347, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804118622267, {product_id: 1825849868347, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804118687803, {product_id: 1825849868347, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804118753339, {product_id: 1825849868347, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804118851643, {product_id: 1825849868347, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804118917179, {product_id: 1825849868347, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804118982715, {product_id: 1825849868347, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804119081019, {product_id: 1825849868347, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804119146555, {product_id: 1825849868347, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804119212091, {product_id: 1825849868347, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804119277627, {product_id: 1825849868347, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804119343163, {product_id: 1825849868347, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804119441467, {product_id: 1825849868347, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804119507003, {product_id: 1825849868347, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804119572539, {product_id: 1825849868347, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveProduct("patrick-bet-david-t-shirt-valuetainment-companies-01", 1825845968955);
+    window.BOLD.common.Shopify.saveVariant(17804067340347, {product_id: 1825845968955, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804067373115, {product_id: 1825845968955, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804067438651, {product_id: 1825845968955, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804067471419, {product_id: 1825845968955, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804067504187, {product_id: 1825845968955, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804067536955, {product_id: 1825845968955, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804067569723, {product_id: 1825845968955, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804067602491, {product_id: 1825845968955, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804067635259, {product_id: 1825845968955, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804067668027, {product_id: 1825845968955, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804067700795, {product_id: 1825845968955, price: 2499, group_id: ''});
+    window.BOLD.common.Shopify.saveVariant(17804067733563, {product_id: 1825845968955, price: 2499, group_id: ''});
     window.BOLD.common.Shopify.metafields = window.BOLD.common.Shopify.metafields || {};
     window.BOLD.common.Shopify.metafields["bold_rp"] = {};</script><!-- /snippets/oldIE-js.liquid -->
 
 
     <!--[if lt IE 9]>
 <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js" type="text/javascript"></script>
-<script src="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/respond.min.js?8879239935739047236" type="text/javascript"></script>
+<script src="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/respond.min.js?5656582863468506585" type="text/javascript"></script>
 <link href="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/respond-proxy.html" id="respond-proxy" rel="respond-proxy" />
 <link href="//www.valuetainmentstore.com/search?q=a0f643171bf8c4205fb96f0e08961ef4" id="respond-redirect" rel="respond-redirect" />
 <script src="//www.valuetainmentstore.com/search?q=a0f643171bf8c4205fb96f0e08961ef4" type="text/javascript"></script>
 <![endif]-->
 
 
-    <link href="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/fonts.home.scss.css?8879239935739047236"
+    <link href="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/fonts.collection.scss.css?5656582863468506585"
           rel="stylesheet" type="text/css" media="all"/>
 
-    <link href='//fonts.googleapis.com/css?family=.|Open+Sans+Condensed:light,normal,bold|Open+Sans+Condensed:light,normal,bold|'
-          rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=.|Open+Sans+Condensed:light,normal,bold|' rel='stylesheet'
+          type='text/css'>
 
 
-    <script src="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/player-filter-engine.js?8879239935739047236"
-            type="text/javascript"></script>
-
-
-    <script src="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/semantic.min.js?8879239935739047236"
-            type="text/javascript"></script>
-
-    <link href="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/icon.min.css?8879239935739047236" rel="stylesheet"
+    <link href="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/swatches.css?5656582863468506585" rel="stylesheet"
+          type="text/css" media="all"/>
+    <link href="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/owl.carousel.css?5656582863468506585" rel="stylesheet"
+          type="text/css" media="all"/>
+    <link href="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/owl.theme.css?5656582863468506585" rel="stylesheet"
           type="text/css" media="all"/>
 
 
-    <link href="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/custom.scss?8879239935739047236" rel="stylesheet"
+    <script src="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/bootstrap.min.js?5656582863468506585"
+            type="text/javascript"></script>
+    <script src="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/quick-view.js?5656582863468506585"
+            type="text/javascript"></script>
+
+
+    <script src="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/product.js?5656582863468506585"
+            type="text/javascript"></script>
+
+    <script src="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/jquery.zoom.min.js?5656582863468506585"
+            type="text/javascript"></script>
+    <script src="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/owl.carousel.min.js?5656582863468506585"
+            type="text/javascript"></script>
+    <script src="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/popup.min.js?5656582863468506585"
+            type="text/javascript"></script>
+
+
+    <script src="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/player-filter-engine.js?5656582863468506585"
+            type="text/javascript"></script>
+
+
+    <script src="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/semantic.min.js?5656582863468506585"
+            type="text/javascript"></script>
+
+    <link href="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/icon.min.css?5656582863468506585" rel="stylesheet"
           type="text/css" media="all"/>
-    <link href="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/hamburgers.css?8879239935739047236" rel="stylesheet"
+
+
+    <link href="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/custom.scss?5656582863468506585" rel="stylesheet"
+          type="text/css" media="all"/>
+    <link href="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/hamburgers.css?5656582863468506585" rel="stylesheet"
           type="text/css" media="all"/>
 
 
@@ -5613,7 +6233,7 @@
 
 </head>
 
-<body id="valuetainment-official-store-patrick-bet-david-shirts-and-gear" class="template-index">
+<body id="valuetainment-men-39-s-shirts-hoodies-amp-sweatshirt-apparel-500-level" class="template-collection">
 
 
 <div id="NavDrawer" class="drawer drawer--left">
@@ -5822,990 +6442,737 @@
 
 {% include 'includes/index/header.html' %}
 
-
 <div id="PageContainer" class="is-moved-by-drawer">
 
 
-    <div id="mobile-main-slide"><img
-            src="https://s3.amazonaws.com/500level/Storefront+Assets/valuetainment/mobile-main-slide.jpg"/></div>
+    <main class="wrapper main-content" role="main">
+
+        <script src="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/dropdown.min.js?5656582863468506585"
+                type="text/javascript"></script>
+        <script src="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/semantic.min.js?5656582863468506585"
+                type="text/javascript"></script>
+
+
+        <link href="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/icon.min.css?5656582863468506585" rel="stylesheet"
+              type="text/css" media="all"/>
+        <link href="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/sticky.min.css?5656582863468506585"
+              rel="stylesheet" type="text/css" media="all"/>
+
+
+        <!-- <div>
+  collection tags:city=Valuetainmentgender=menlisting=Uniquemeta-size-chart-mens-premium-t-shirtplayer=Patrick Bet-Davidplayer=Valuetainmentsport=Companiesstyle=Men's Premium T-Shirtteam=Valuetainmenttitle=Valuetainment Building A Unicorn Rtitle=Valuetainment Capitalism Works Rtitle=Valuetainment Emprendedor Rtitle=Valuetainment Emprendedor W WHTtitle=Valuetainment Enjoy Ktitle=Valuetainment Enjoy Rtitle=Valuetainment Godfather W WHTtitle=Valuetainment I Am America R WHTtitle=Valuetainment I Am Btitle=Valuetainment I Am Canada R WHTtitle=Valuetainment I Am Dtitle=Valuetainment I Am Gtitle=Valuetainment I Am G WHTtitle=Valuetainment I Am India O WHTtitle=Valuetainment I Am Ltitle=Valuetainment I Am Mtitle=Valuetainment I Am Mexico G WHTtitle=Valuetainment I Am Rtitle=Valuetainment I Am Rainbow WHTtitle=Valuetainment I Am Spanish Rtitle=Valuetainment I Am Spanish W WHTtitle=Valuetainment I Am Texas B WHTtitle=Valuetainment I Am The Netherlands R WHTtitle=Valuetainment I Am W WHTtitle=Valuetainment I Am Y WHTtitle=Valuetainment I Heart Capitalism Ktitle=Valuetainment I Heart Capitalism Rtitle=Valuetainment Life Is Math W WHTtitle=Valuetainment LRIL W WHTtitle=Valuetainment Solve W WHTtitle=Valuetainment Splatter Ktitle=Valuetainment Splatter Rv=5;
+</div> -->
+
+        <div class="grid--rev has-sidebar">
+
+
+            <!-- #COLLECTION SIDEBAR -->
+            <div class="grid__item collection-sidebar">
+
+
+                <!-- Step 1: Add your filters -->
+                <!-- The collection filter is entirely optional -->
+                <!-- You can have as many as 3 of the product tags filters -->
+
+                <h1 class="mobile-title">Valuetainment Men's Shirts, Hoodies, and Sweatshirt Apparel</h1>
+
+
+                <a class="toggle-filters-mobile" href="#">
+                    <span class="filters-header"><span class="timber-icon timber-icon-filter"></span>Filters</span>
+                    <span class="collection-count">(32 Items)</span>
+
+                </a>
+
+                <ul class="mobile-current-tags">
+
+
+                    <li class="tag-style">
+
+
+                        <a href="/collections/men" title="Remove tag style=Men&#39;s Premium T-Shirt">
+
+	<span class="filtered-items-icon-x">
+
+      <span class="icon icon-x"></span>
+
+    	Men's Premium T-Shirt
+
+    </span>
+
+                        </a>
+
+
+                    </li>
+
+                </ul>
+
+
+                <div class="filters">
+
+                    <div class="filters-container">
+
+                        <h1 class="filter-name-mobile">Filters</h1>
+                        <a href="#" class="mobile-filters-close"><span class="icon icon-x"></span></a>
+
+                        <!--   <h3>Valuetainment Men's Shirts, Hoodies, and Sweatshirt Apparel</h3> -->
+                        <h4 class="filter-title-desktop">Стиль</h4>
+                        <!--  STYLE FILTER  -->
+                        <div class="style-filters">
+
+
+                            <h4 class="filter-name-desktop"><a data-filter="style-men" class="toggle on"
+                                                               href="#"><strong>{{ filter_gend }}</strong><span
+                                    class="icon icon-minus"></span></a></h4>
+                            <h4 class="filter-name-mobile"><a data-filter="style-men" class="toggle on"
+                                                              href="#"><strong>men Styles</strong> <span>Men's Premium T-Shirt</span></a><span
+                                    class="icon icon-minus"></span></h4>
+
+                            <ul class="filter style style-men style_filter" data-filter="style">
+
+                                {% for arg in args %}
+                                    <li class="{% active arg.get_absolute_url  %}" data-gender="men"><a  data-tag-handle="style-mens-baseball-t-shirt"
+                                                             href="{{ arg.get_absolute_url }}"><span></span>
+                                        {{ arg.style }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <!--  // STYLE FILTER  -->
+
+
+                    </div>
+
+                </div>
+
+
+                <script>
+
+
+                    function setFilter() {
+                    }
+
+
+                    $(document).ready(
+                        function () {
+
+
+                            $('.mobile-filters-close').click(
+                                function () {
+                                    closeMobileFilters();
+                                }
+                            );
+
+
+                            $('.toggle-filters-mobile').click(
+                                function () {
+                                    showMobileFilters();
+                                    return false;
+                                }
+                            );
+
+
+                            var mobile = $(window).width() <= 768;
+
+//       styleFilterGenderFolders();
+
+                            if (!mobile) {
+//         $('.ui.sticky').sticky({ observeChanges:true, context: '#PageContainer', offset:$('.header-nav').height()+30})
+                            }
+
+
+{#                            $('.filter a').click(#}
+{#                                function () {#}
+{#                                    filterClick($(this));#}
+{#                                    return false;#}
+{#                                }#}
+{#                            );#}
+
+
+                            if (window.innerWidth <= 768) {
+                                $('a.toggle').removeClass("on");
+
+                                $('ul.filter').css("display", "none");
+
+                                $('.filters h4 > span.icon').removeClass('icon-minus').addClass('icon-plus');
+
+
+                                // capture click event to prevent page from reloading
+                                // in order to allow double filtering
+                                $('.filter a').on('click',
+                                    function () {
+
+//           		var tag_handle = $(this).attr('data-tag-handle');
+//           		setFilter(tag_handle, '');
+//           		return false;
+                                    }
+                                );
+
+
+                            }
+
+                            $('a.toggle').on('click',
+                                function () {
+
+                                    filterToggleClick($(this));
+
+                                    return false;
+
+                                }
+                            );
+
+
+                            timber.collection_filters = [];
+
+
+                            timber.collection_filters['style'] = 'style-mens-premium-t-shirt';
+
+
+                        });
+
+
+                </script>
+
+
+                <!-- !===city=Valuetainmentgender=menlisting=Uniquemeta-size-chart-mens-cotton-t-shirtmeta-size-chart-mens-premium-t-shirtplayer=Patrick Bet-Davidplayer=Valuetainmentsport=Companiesstyle=Men's Baseball T-Shirtstyle=Men's Cotton T-Shirtstyle=Men's Hoodiestyle=Men's Premium T-Shirtteam=Valuetainmenttitle=Valuetainment Building A Unicorn Rtitle=Valuetainment Capitalism Works Rtitle=Valuetainment Emprendedor Rtitle=Valuetainment Emprendedor W WHTtitle=Valuetainment Enjoy Ktitle=Valuetainment Enjoy Rtitle=Valuetainment Godfather W WHTtitle=Valuetainment I Am America R WHTtitle=Valuetainment I Am Btitle=Valuetainment I Am Canada R WHTtitle=Valuetainment I Am Dtitle=Valuetainment I Am Gtitle=Valuetainment I Am G WHTtitle=Valuetainment I Am India O WHTtitle=Valuetainment I Am Ltitle=Valuetainment I Am Mtitle=Valuetainment I Am Mexico G WHTtitle=Valuetainment I Am Rtitle=Valuetainment I Am Rainbow WHTtitle=Valuetainment I Am Spanish Rtitle=Valuetainment I Am Spanish W WHTtitle=Valuetainment I Am Texas B WHTtitle=Valuetainment I Am The Netherlands R WHTtitle=Valuetainment I Am W WHTtitle=Valuetainment I Am Y WHTtitle=Valuetainment I Heart Capitalism Ktitle=Valuetainment I Heart Capitalism Rtitle=Valuetainment Life Is Math W WHTtitle=Valuetainment LRIL W WHTtitle=Valuetainment Solve W WHTtitle=Valuetainment Splatter Ktitle=Valuetainment Splatter Rv=5v=5;===! -->
+                <!-- / -->
+            </div>
+
+
+            <div class="grid__item collection-products">
+
+                <div class="collection-description desktop-12"><h1>Valuetainment Men's Shirts, Hoodies, and Sweatshirt
+                    Apparel</h1>
+                    <div class="rte"></div>
+                </div>
+
+                <div class="loader"></div>
+
+                <!-- #PRODUCT GRID -->
+                <div class="grid-uniform">
+
+
+                    <!-- TRUE RED PATCH? -->
+<script>
+                    function edit_href(id,pr_id) {
+                        $('.grid__image').attr('href' ,'/products/'+pr_id+'/'+id)
+                    }
+                </script>
+        {% for arg in products %}
+
+                    <div class="grid__item fixed-width-variable-columns product">
+
+                        <figure class="product-image-conatiner">
+
+
+                            <a href="/products/{{ arg.id }}/{%  get_main_image arg.id 1 %}"
+                               class="link grid__image kids"><img  data-n="1" class="lazy"
+                                                                  src="{{ arg.image.all.first}}"
+                                                                  alt="" style="width: 640px;height: 400px">
+
+                                <div class="product-title">{{ arg.title }}</div>
+                                <div class="product-style">{{ arg.style }}</div>
+                                <p class="price">{{ arg.price }} ₽</p>
+                                <div class="ui loader"></div>
+                            </a>
+
+
+                            <ul class="product-options">
+
+                                <li id="product-options-1828996317243">
+
+
+                                    <div class="product-options-set set-2 o-3">
+
+
+{#                        {% for image in get_rate %}#}
+{#                                        <!-- TRUE RED PATCH? -->#}
+{#                                        <label class="color  number-1"#}
+{#                                               style="cursor:pointer;background-size:contain; background-color: rgb{{image.get_color}}; }">#}
+{#                                            <input class="imageSrc" type="hidden"#}
+{#                                                   value="">#}
+{#                                            <input checked type="radio" data-option-index="1" name="Color"#}
+{#                                                   value="Tri Ash"/>#}
+{#                                        </label>#}
+{#{% endfor %}#}
+                                        <!-- TRUE RED PATCH? -->
+                        {% get_rate arg.id arg.title%}
+                                    </div>
+                                    <div class="product-options-set set-3 o-6">
+                                    </div>
+                                </li>
+                            </ul>
+                        </figure>
+                    </div>
+{% endfor %}
+                    <!-- TRUE RED PATCH? -->
 
 
 
-         {% block content %}
-            {% endblock %}
- {% include 'includes/index/footer.html' %}
-    <script src="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/fastclick.min.js?8879239935739047236"
-            type="text/javascript"></script>
-    <script src="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/timber.js?8879239935739047236"
-            type="text/javascript"></script>
 
 
-    <script>
+                </div>
+                <!-- / -->
 
-    </script>
+            </div>
 
+            <ul class="pagination"></ul>
 
-    <script src="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/handlebars.min.js?8879239935739047236"
-            type="text/javascript"></script>
-    <!-- /snippets/ajax-cart-template.liquid -->
+            <div class="collection-description-mobile"></div>
 
-    <script id="CartTemplate" type="text/template">
-
-        <form action="/cart" method="post" novalidate class="cart ajaxcart">
-            <div class="ajaxcart__inner">
-                {#        {{#items}}#}
-                <div class="ajaxcart__product">
-                    <div class="ajaxcart__row" data-line="{{ line }}">
-                        <div class="grid">
-                            <div class="grid__item one-quarter"><img src="{{ img }}" alt="">
-                            </div>
-                            <div class="grid__item three-quarters">
-                                <p>
-                                    {#                  {{name}}#}
-                                    {#                  {{#if variation}}#}
-                                    <span class="ajaxcart__product-meta">
-{#                        {{variation}}#}
-                    </span>
-                                    {#                  {{/if}}#}
-                                    {#                  {{#properties}}#}
-                                    {#                    {{#each this}}#}
-                                    {#                      {{#if this}}#}
-                                    <span class="ajaxcart__product-meta">
-{#                            {{@key}}: {{this}}#}
-                        </span>
-                                    {#                      {{/if}}#}
-                                    {#                    {{/each}}#}
-                                    {#                  {{/properties}}#}
-
-                                </p>
-
-                                <div class="grid--full display-table">
-                                    <div class="grid__item display-table-cell one-half">
-
-                                        <div class="">
-                                            <input type="number" name="updates[]" class="ajaxcart__qty-num"
-                                                   value="{{ itemQty }}" min="0" data-id="{{ id }}"
-                                                   data-line="{{ line }}" aria-label="quantity" pattern="[0-9]*">
-                                            <button type="button"
-                                                    class="ajaxcart__qty-adjust ajaxcart__qty--minus _icon-fallback-text"
-                                                    data-id="{{ id }}" data-qty="{{ itemMinus }}"
-                                                    data-line="{{ line }}">
-                                                Remove Item ({{ itemQty }})
-                                            </button>
+        </div>
 
 
-                                        </div>
+        <div class="data" data-total-pages="" data-total-results="" data-time=""></div>
+
+        <style>
+
+            #loadingMore {
+                position: relative;
+                width: 100%;
+                height: 0px;
+                float: left;
+                text-align: center;
+                opacity: 0;
+                filter: alpha(opacity=0);
+                text-transform: uppercase;
+                font: bold 16px open sans condensed;
+                color: #000;
+            }
+
+        </style>
+
+
+        <script>
+
+            $(document).ready(
+                function () {
+                    colorSwatchesList();
+//       timber.stickyFilters();
+
+                }
+            );
+
+            jQuery('.filter').find('h4').click(
+                function () {
+                    jQuery(this).next('ul').slideDown();
+                }
+            )
+
+            var actualPage = 1;
+            var pagesRetrieved = [1];
+            var scrolling = false;
+            var hasMore = true;
+            var retrieving = false;
+            var v = location.href;
+            var dt = 400;
+
+            if ($(".grid-uniform .grid__item").length < 9) {
+                hasMore = false;
+            }
+
+            if (v.indexOf("?page=") >= 0) {
+                v = v.substring(0, v.indexOf("?page="));
+            }
+
+            $(window).scroll(function () {
+
+
+                if (hasMore && !retrieving) {
+                    if (timer)
+                        window.clearTimeout(timer);
+
+                    timer = window.setTimeout(function () {
+
+                        var aux = location.href;
+
+                        if (v !== aux) {
+                            v = location.href;
+                            pagesRetrieved = [1];
+                            console.log("NEW URL:" + v);
+                        }
+
+                        var footerHeight = $(".site-footer.small--text-center").height();
+                        var a = ($(window).scrollTop()) >= ($(document).height() - $(window).height() - footerHeight);
+                        console.log("1:" + a + "(" + $(window).scrollTop() + "-" + ($(document).height() - $(window).height() - footerHeight) + ")");
+
+                        if ($(window).scrollTop() >= ($(document).height() - $(window).height() - footerHeight - 600)) {
+
+                            var last = pagesRetrieved.length;
+                            var next = last + 1;
+
+                            console.log(pagesRetrieved);
+                            console.log("IndexOf(" + next + ")= " + pagesRetrieved.indexOf(next));
+
+                            if (pagesRetrieved.indexOf(next) == -1) {
+
+                                var url = v;
+
+                                if (url.indexOf('?') > -1) url = url.split('?')[0];
+                                url += "?page=" + next;
+
+                                fetchNextPageByAJAX(url);
+                                pagesRetrieved.push(next);
+                            }
+
+                        }
+
+                    }, 150);
+                }
+
+            })
+
+
+        </script>
+
+
+    </main>
+
+    <!-- begin site-footer -->
+    {% include 'includes/index/footer.html' %}
+    <!-- //site-footer -->
+</div>
+
+<script src="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/fastclick.min.js?5656582863468506585"
+        type="text/javascript"></script>
+<script src="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/timber.js?5656582863468506585"
+        type="text/javascript"></script>
+
+
+<script>
+
+</script>
+
+
+<script src="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/handlebars.min.js?5656582863468506585"
+        type="text/javascript"></script>
+<!-- /snippets/ajax-cart-template.liquid -->
+
+<script id="CartTemplate" type="text/template">
+
+    <form action="/cart" method="post" novalidate class="cart ajaxcart">
+        <div class="ajaxcart__inner">
+
+            <div class="ajaxcart__product">
+                <div class="ajaxcart__row" data-line="{{ line }}">
+                    <div class="grid">
+                        <div class="grid__item one-quarter"><img src="{{ img }}" alt="">
+                        </div>
+                        <div class="grid__item three-quarters">
+                            <p>
+
+                                <span class="ajaxcart__product-meta"></span>
+
+                                <span class="ajaxcart__product-meta"></span>
+
+
+                            </p>
+
+                            <div class="grid--full display-table">
+                                <div class="grid__item display-table-cell one-half">
+
+                                    <div class="">
+                                        <input type="number" name="updates[]" class="ajaxcart__qty-num"
+                                               value="{{ itemQty }}" min="0" data-id="{{ id }}" data-line="{{ line }}"
+                                               aria-label="quantity" pattern="[0-9]*">
+                                        <button type="button"
+                                                class="ajaxcart__qty-adjust ajaxcart__qty--minus _icon-fallback-text"
+                                                data-id="{{ id }}" data-qty="{{ itemMinus }}" data-line="{{ line }}">
+                                            Remove Item ({{ itemQty }})
+                                        </button>
 
 
                                     </div>
-                                    <div class="grid__item display-table-cell one-half text-right">
-                                        {{ linePrice }}
-                                    </div>
+
+
+                                </div>
+                                <div class="grid__item display-table-cell one-half text-right">
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                {#        {{/items}}#}
+            </div>
+
+
+        </div>
+        <div class="ajaxcart__footer">
+            <h1>Summary</h1>
+            <div class="grid--full subtotal">
+                <div class="grid__item two-thirds">
+                    <p>Subtotal</p>
+                </div>
+                <div class="grid__item one-third text-right">
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="grid--full shipping-taxes">
+
+
+                <div class="grid__item two-thirds">Shipping & taxes</div>
+                <div class="grid__item one-third text-right">$__.__</div>
 
 
             </div>
-            <div class="ajaxcart__footer">
-                <h1>Summary</h1>
-                <div class="grid--full subtotal">
-                    <div class="grid__item two-thirds">
-                        <p>Subtotal</p>
-                    </div>
-                    <div class="grid__item one-third text-right">
-                        {#            <p>{{{totalPrice}}}</p>#}
-                    </div>
-                </div>
-
-                <div class="grid--full shipping-taxes">
 
 
-                    <div class="grid__item two-thirds">Shipping & taxes</div>
-                    <div class="grid__item one-third text-right">$__.__</div>
+            <button type="submit" class="btn--secondary btn--full cart__checkout guest_checkout" name="checkout">
+                Guest Checkout
+            </button>
 
 
-                </div>
-
-
-                <button type="submit" class="btn--secondary btn--full cart__checkout guest_checkout" name="checkout">
-                    Guest Checkout
-                </button>
-
-
-                <div class="additional_checkout_buttons">
-                    <button name="button" type="submit" aria-label="Apple Pay" data-strategy="cart"
-                            style="display: none"
-                            class="additional-checkout-button additional-checkout-button--apple-pay"><span
-                            class="additional-checkout-button-visually-hidden">Checkout with: Apple Pay</span><span
-                            class="additional-checkout-button__logo"/></button>
-                    <div class="additional-checkout-button additional-checkout-button--paypal"
-                         data-strategy="cart"></div>
-                    <noscript id="noscript-paypal-replacement">
-                        <button name="goto_pp" type="submit" id="paypal-express-button"
-                                class="additional-checkout-button additional-checkout-button--paypal-express"
-                                value="paypal_express" data-strategy="cart"><img alt="Checkout with: PayPal"
-                                                                                 src="//cdn.shopify.com/s/assets/checkout/easy-checkout-btn-paypal-9835af2c2b0e2a543b2905789a7f08b678d62de2c77c1b0d16fd7689aff463f3.png"/>
-                        </button>
-                    </noscript>
-                    <div class="additional-checkout-button additional-checkout-button--venmo"
-                         data-strategy="cart"></div>
-                    <a style="display: inline-block" id="amazon-payments-pay-button-b70dbc7d6e4126762baf"
-                       class="amazon-payments-pay-button additional-checkout-button additional-checkout-button--amazon"
-                       href="javascript:void(0)" aria-describedby="forwarding-external-message"><img
-                            alt="Checkout with: Amazon Pay" class="additional-checkout-button__logo"
-                            src="//cdn.shopify.com/s/assets/checkout/easy-checkout-btn-amazon-pay-72091bddbea7788c02d934d95d97fe6a0da7618cadc5838c40f44f190fa24442.png"/></a>
-                </div>
-
+            <div class="additional_checkout_buttons">
+                <button name="button" type="submit" aria-label="Apple Pay" data-strategy="cart" style="display: none"
+                        class="additional-checkout-button additional-checkout-button--apple-pay"><span
+                        class="additional-checkout-button-visually-hidden">Checkout with: Apple Pay</span><span
+                        class="additional-checkout-button__logo"/></button>
+                <div class="additional-checkout-button additional-checkout-button--paypal" data-strategy="cart"></div>
+                <noscript id="noscript-paypal-replacement">
+                    <button name="goto_pp" type="submit" id="paypal-express-button"
+                            class="additional-checkout-button additional-checkout-button--paypal-express"
+                            value="paypal_express" data-strategy="cart"><img alt="Checkout with: PayPal"
+                                                                             src="//cdn.shopify.com/s/assets/checkout/easy-checkout-btn-paypal-9835af2c2b0e2a543b2905789a7f08b678d62de2c77c1b0d16fd7689aff463f3.png"/>
+                    </button>
+                </noscript>
+                <div class="additional-checkout-button additional-checkout-button--venmo" data-strategy="cart"></div>
+                <a style="display: inline-block" id="amazon-payments-pay-button-68214afbb5d620ff3e51"
+                   class="amazon-payments-pay-button additional-checkout-button additional-checkout-button--amazon"
+                   href="javascript:void(0)" aria-describedby="forwarding-external-message"><img
+                        alt="Checkout with: Amazon Pay" class="additional-checkout-button__logo"
+                        src="//cdn.shopify.com/s/assets/checkout/easy-checkout-btn-amazon-pay-72091bddbea7788c02d934d95d97fe6a0da7618cadc5838c40f44f190fa24442.png"/></a>
             </div>
 
-            <a href="#" onclick="javascript:timber.RightDrawer.close(); return false;"
-               class="js-drawer-close checkout-continue-button">Continue Shopping</a>
-
-
-        </form>
-
-        <div class="accepted-payments">
-            <p> Accepted Payments </p>
-            <span class="timber-icon timber-icon-american_express"></span>
-            <span class="timber-icon timber-icon-master"></span>
-            <span class="timber-icon timber-icon-discover"></span>
-            <span class="timber-icon timber-icon-visa"></span>
-            <span class="timber-icon timber-icon-amazon_payments"></span>
-            <span class="timber-icon timber-icon-paypal"></span>
         </div>
 
+        <a href="#" onclick="javascript:timber.RightDrawer.close(); return false;"
+           class="js-drawer-close checkout-continue-button">Continue Shopping</a>
 
-    </script>
-    <script id="AjaxQty" type="text/template">
 
-        <div class="ajaxcart__qty">
-            <button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--minus _icon-fallback-text"
-                    data-id="{{ id }}" data-qty="{{ itemMinus }}">
-                <span class="icon icon-minus" aria-hidden="true"></span>
-                <span class="fallback-text">&minus;</span>
-            </button>
-            <input type="text" class="ajaxcart__qty-num" value="{{ itemQty }}" min="0" data-id="{{ id }}"
-                   aria-label="quantity" pattern="[0-9]*">
-            <button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--plus _icon-fallback-text"
-                    data-id="{{ id }}" data-qty="{{ itemAdd }}">
-                <span class="icon icon-plus" aria-hidden="true"></span>
-                <span class="fallback-text">+</span>
-            </button>
-        </div>
+    </form>
 
-    </script>
-    <script id="JsQty" type="text/template">
+    <div class="accepted-payments">
+        <p> Accepted Payments </p>
+        <span class="timber-icon timber-icon-american_express"></span>
+        <span class="timber-icon timber-icon-master"></span>
+        <span class="timber-icon timber-icon-discover"></span>
+        <span class="timber-icon timber-icon-visa"></span>
+        <span class="timber-icon timber-icon-amazon_payments"></span>
+        <span class="timber-icon timber-icon-paypal"></span>
+    </div>
 
-        <div class="js-qty">
-            <button type="button" class="js-qty__adjust js-qty__adjust--minus _icon-fallback-text" data-id="{{ id }}"
-                    data-qty="{{ itemMinus }}">
-                <span class="icon icon-minus" aria-hidden="true"></span>
-                <span class="fallback-text">&minus;</span>
-            </button>
-            <input type="text" class="js-qty__num" value="{{ itemQty }}" min="1" data-id="{{ id }}"
-                   aria-label="quantity" pattern="[0-9]*" name="{{ inputName }}" id="{{ inputId }}">
-            <button type="button" class="js-qty__adjust js-qty__adjust--plus _ico-fallback-text" data-id="{{ id }}"
-                    data-qty="{{ itemAdd }}">
-                <span class="icon icon-plus" aria-hidden="true"></span>
-                <span class="fallback-text">+</span>
-            </button>
-        </div>
 
-    </script>
+</script>
+<script id="AjaxQty" type="text/template">
 
-    <script>
-        //   jQuery('#drawer-cart-title-qty').html('()');
-    </script>
+    <div class="ajaxcart__qty">
+        <button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--minus _icon-fallback-text" data-id="{{ id }}"
+                data-qty="{{ itemMinus }}">
+            <span class="icon icon-minus" aria-hidden="true"></span>
+            <span class="fallback-text">&minus;</span>
+        </button>
+        <input type="text" class="ajaxcart__qty-num" value="{{ itemQty }}" min="0" data-id="{{ id }}"
+               aria-label="quantity" pattern="[0-9]*">
+        <button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--plus _icon-fallback-text" data-id="{{ id }}"
+                data-qty="{{ itemAdd }}">
+            <span class="icon icon-plus" aria-hidden="true"></span>
+            <span class="fallback-text">+</span>
+        </button>
+    </div>
 
-    <script src="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/ajax-cart.js?8879239935739047236"
-            type="text/javascript"></script>
-    <script>
-        jQuery(function ($) {
-            ajaxCart.init({
-                formSelector: '#AddToCartForm',
-                cartContainer: '#CartContainer',
-                addToCartSelector: '#AddToCart',
-                cartCountSelector: '#CartCount,#drawer-cart-title-qty',
-                cartCostSelector: '#CartCost',
-                moneyFormat: "${{amount}}"
-            });
+</script>
+<script id="JsQty" type="text/template">
+
+    <div class="js-qty">
+        <button type="button" class="js-qty__adjust js-qty__adjust--minus _icon-fallback-text" data-id="{{ id }}"
+                data-qty="{{ itemMinus }}">
+            <span class="icon icon-minus" aria-hidden="true"></span>
+            <span class="fallback-text">&minus;</span>
+        </button>
+        <input type="text" class="js-qty__num" value="{{ itemQty }}" min="1" data-id="{{ id }}" aria-label="quantity"
+               pattern="[0-9]*" name="{{ inputName }}" id="{{ inputId }}">
+        <button type="button" class="js-qty__adjust js-qty__adjust--plus _ico-fallback-text" data-id="{{ id }}"
+                data-qty="{{ itemAdd }}">
+            <span class="icon icon-plus" aria-hidden="true"></span>
+            <span class="fallback-text">+</span>
+        </button>
+    </div>
+
+</script>
+
+<script>
+    //   jQuery('#drawer-cart-title-qty').html('()');
+</script>
+
+<script src="//cdn.shopify.com/s/files/1/2304/3009/t/6/assets/ajax-cart.js?5656582863468506585"
+        type="text/javascript"></script>
+<script>
+    jQuery(function ($) {
+        ajaxCart.init({
+            formSelector: '#AddToCartForm',
+            cartContainer: '#CartContainer',
+            addToCartSelector: '#AddToCart',
+            cartCountSelector: '#CartCount,#drawer-cart-title-qty',
+            cartCostSelector: '#CartCost',
+            moneyFormat: "${{amount}}"
         });
+    });
 
-        jQuery('body').on('ajaxCart.afterCartLoad', function (evt, cart) {
-            // Bind to 'ajaxCart.afterCartLoad' to run any javascript after the cart has loaded in the DOM
-            timber.RightDrawer.open();
-        });
-    </script>
-
-
-    <script>
-
-        //      Can this be deleted?
-
-        // window.addEventListener('load',function(){
-        // var linkerParam =ga.getAll()[0].get('linkerParam');
-        // jQuery('#CartContainer form').attr('action',"/cart?"+linkerParam);
-        // })
-    </script>
-
-    <script>
-        var timer = setInterval(function () {
-            if (jQuery('[action="/cart"]').length > 0) {
-                var params = ga.getAll()[0].get('linkerParam')
-                var action = jQuery('.cart.ajaxcart').attr('action');
-                jQuery('.cart.ajaxcart').attr('action', action + "?" + params);
-
-                clearInterval(timer);
-
-            }
-        }, 1000)
-    </script>
+    jQuery('body').on('ajaxCart.afterCartLoad', function (evt, cart) {
+        // Bind to 'ajaxCart.afterCartLoad' to run any javascript after the cart has loaded in the DOM
+        timber.RightDrawer.open();
+    });
+</script>
 
 
-    <script type="text/javascript">
-        var triggermail = triggermail || [];
-        triggermail.load = function (a) {
-            var b = document.createElement("script");
-            b.type = "text/javascript";
-            b.async = !0;
-            b.src = ("https:" === document.location.protocol ? "https://" : "http://") + "triggeredmail.appspot.com/triggermail.js/" + a + ".js";
-            a = document.getElementsByTagName("script")[0];
-            a.parentNode.insertBefore(b, a)
-        };
-        triggermail.load("500_level");
-        window.triggermail = triggermail;
-    </script>
+<script>
+
+    //      Can this be deleted?
+
+    // window.addEventListener('load',function(){
+    // var linkerParam =ga.getAll()[0].get('linkerParam');
+    // jQuery('#CartContainer form').attr('action',"/cart?"+linkerParam);
+    // })
+</script>
+
+<script>
+    var timer = setInterval(function () {
+        if (jQuery('[action="/cart"]').length > 0) {
+            var params = ga.getAll()[0].get('linkerParam')
+            var action = jQuery('.cart.ajaxcart').attr('action');
+            jQuery('.cart.ajaxcart').attr('action', action + "?" + params);
+            console.log("Seen cart");
+            clearInterval(timer);
+
+        }
+    }, 1000)
+</script>
 
 
-    <!-- Begin Google Analytics Vertical Attributes -->
-    <script type="text/javascript">
-        ga('set', 'dimension1', 'shopify_US_1825854390331_17804177965115');
-        ga('set', 'dimension2', 'index');
-        ga('set', 'dimension3', '24.99');
-    </script>
-
-    <script type="text/javascript">
-        var _learnq = _learnq || [];
-
-        _learnq.push(['account', 'PruMDc']);
-
-        (function () {
-            var b = document.createElement('script');
-            b.type = 'text/javascript';
-            b.async = true;
-            b.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'a.klaviyo.com/media/js/analytics/analytics.js';
-            var a = document.getElementsByTagName('script')[0];
-            a.parentNode.insertBefore(b, a);
-        })();
-    </script>
-    <!-- Begin linked options on product page script -->
-    <script>
-        // (c) Copyright 2016 Caroline Schnapp. All Rights Reserved. Contact: mllegeorgesand@gmail.com
-        // See https://docs.shopify.com/themes/customization/navigation/link-product-options-in-menus
-        var Shopify = Shopify || {};
-        Shopify.optionsMap = {};
-        Shopify.updateOptionsInSelector = function (selectorIndex) {
-
-            switch (selectorIndex) {
-                case 0:
-                    var key = 'root';
-                    var selector = jQuery('.single-option-selector:eq(0)');
-                    break;
-                case 1:
-                    var key = jQuery('.single-option-selector:eq(0)').val();
-                    var selector = jQuery('.single-option-selector:eq(1)');
-                    break;
-                case 2:
-                    var key = jQuery('.single-option-selector:eq(0)').val();
-                    key += ' / ' + jQuery('.single-option-selector:eq(1)').val();
-                    var selector = jQuery('.single-option-selector:eq(2)');
-            }
-
-            var initialValue = selector.val();
-            selector.empty();
-            var availableOptions = Shopify.optionsMap[key];
-            for (var i = 0; i < availableOptions.length; i++) {
-                var option = availableOptions[i];
-                var newOption = jQuery('<option></option>').val(option).html(option);
-                selector.append(newOption);
-            }
-            jQuery('.swatch[data-option-index="' + selectorIndex + '"] .swatch-element').each(function () {
-                if (jQuery.inArray($(this).attr('data-value'), availableOptions) !== -1) {
-                    $(this).removeClass('soldout').show().find(':radio').removeAttr('disabled', 'disabled').removeAttr('checked');
-                }
-                else {
-                    $(this).addClass('soldout').hide().find(':radio').removeAttr('checked').attr('disabled', 'disabled');
-                }
-            });
-            if (jQuery.inArray(initialValue, availableOptions) !== -1) {
-                selector.val(initialValue);
-            }
-            selector.trigger('change');
-
-        };
-        Shopify.linkOptionSelectors = function (product) {
-            // Building our mapping object.
-            for (var i = 0; i < product.variants.length; i++) {
-                var variant = product.variants[i];
-                if (variant.available) {
-                    // Gathering values for the 1st drop-down.
-                    Shopify.optionsMap['root'] = Shopify.optionsMap['root'] || [];
-                    Shopify.optionsMap['root'].push(variant.option1);
-                    Shopify.optionsMap['root'] = Shopify.uniq(Shopify.optionsMap['root']);
-                    // Gathering values for the 2nd drop-down.
-                    if (product.options.length > 1) {
-                        var key = variant.option1;
-                        Shopify.optionsMap[key] = Shopify.optionsMap[key] || [];
-                        Shopify.optionsMap[key].push(variant.option2);
-                        Shopify.optionsMap[key] = Shopify.uniq(Shopify.optionsMap[key]);
-                    }
-                    // Gathering values for the 3rd drop-down.
-                    if (product.options.length === 3) {
-                        var key = variant.option1 + ' / ' + variant.option2;
-                        Shopify.optionsMap[key] = Shopify.optionsMap[key] || [];
-                        Shopify.optionsMap[key].push(variant.option3);
-                        Shopify.optionsMap[key] = Shopify.uniq(Shopify.optionsMap[key]);
-                    }
-                }
-            }
-            // Update options right away.
-            Shopify.updateOptionsInSelector(0);
-            if (product.options.length > 1) Shopify.updateOptionsInSelector(1);
-            if (product.options.length === 3) Shopify.updateOptionsInSelector(2);
-            // When there is an update in the first dropdown.
-            jQuery(".single-option-selector:eq(0)").change(function () {
-                Shopify.updateOptionsInSelector(1);
-                if (product.options.length === 3) Shopify.updateOptionsInSelector(2);
-                return true;
-            });
-            // When there is an update in the second dropdown.
-            jQuery(".single-option-selector:eq(1)").change(function () {
-                if (product.options.length === 3) Shopify.updateOptionsInSelector(2);
-                return true;
-            });
-        };
+<script type="text/javascript">
+    var triggermail = triggermail || [];
+    triggermail.load = function (a) {
+        var b = document.createElement("script");
+        b.type = "text/javascript";
+        b.async = !0;
+        b.src = ("https:" === document.location.protocol ? "https://" : "http://") + "triggeredmail.appspot.com/triggermail.js/" + a + ".js";
+        a = document.getElementsByTagName("script")[0];
+        a.parentNode.insertBefore(b, a)
+    };
+    triggermail.load("500_level");
+    window.triggermail = triggermail;
+</script>
 
 
-        var $addToCartForm = $('form[action="/cart/add"]');
-        if (window.MutationObserver && $addToCartForm.length) {
-            if (typeof observer === 'object' && typeof observer.disconnect === 'function') {
-                observer.disconnect();
-            }
-            var config = {childList: true, subtree: true};
-            var observer = new MutationObserver(function () {
-                Shopify.linkOptionSelectors({
-                    "id": 1825854390331,
-                    "title": "Valuetainment Emprendedor R",
-                    "handle": "patrick-bet-david-t-shirt-valuetainment-companies-25",
-                    "description": "\u003cp\u003eThe ultimate in comfort and intensely soft, our Premium Tri-Blend shirt is our most popular apparel style! This vintage graphic tee has knitted striations similar to your comfy P.E. T-shirts when you were young.\u003c\/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eSlim Fit\u003c\/li\u003e\r\n\u003cli\u003eTri Colors - 50% Polyester \/ 25% Cotton \/ 25% Rayon\u003c\/li\u003e\r\n\u003cli\u003eHeather Colors - 60% Cotton \/ 40% Polyester\u003c\/li\u003e\r\n\u003cli\u003eCrewneck Short Sleeve T-Shirt\u003c\/li\u003e\r\n\u003cli\u003eDigitally Printed Graphics\u003c\/li\u003e\r\n\u003cli\u003eMachine Wash Cold, Tumble Dry Low\u003c\/li\u003e\r\n\u003c\/ul\u003e",
-                    "published_at": "2018-10-30T21:58:04-05:00",
-                    "created_at": "2018-10-30T21:58:06-05:00",
-                    "vendor": "Valuetainment",
-                    "type": "Men's Premium T-Shirt",
-                    "tags": ["city=Valuetainment", "gender=men", "listing=Unique", "meta-size-chart-mens-premium-t-shirt", "player=Patrick Bet-David", "sport=Companies", "style=Men's Premium T-Shirt", "team=Valuetainment", "title=Valuetainment Emprendedor R", "v=5;"],
-                    "price": 2499,
-                    "price_min": 2499,
-                    "price_max": 2499,
-                    "available": true,
-                    "price_varies": false,
-                    "compare_at_price": null,
-                    "compare_at_price_min": 0,
-                    "compare_at_price_max": 0,
-                    "compare_at_price_varies": false,
-                    "variants": [{
-                        "id": 17804177965115,
-                        "title": "Men's Premium T-Shirt \/ Tri Gray \/ S",
-                        "option1": "Men's Premium T-Shirt",
-                        "option2": "Tri Gray",
-                        "option3": "S",
-                        "sku": "C-C-BMNTTRG-XX-0076-001-25-BST",
-                        "requires_shipping": true,
-                        "taxable": true,
-                        "featured_image": {
-                            "id": 5900640747579,
-                            "product_id": 1825854390331,
-                            "position": 1,
-                            "created_at": "2018-10-30T21:58:06-05:00",
-                            "updated_at": "2018-10-30T21:58:08-05:00",
-                            "alt": "Patrick Bet-David Men's Premium T-Shirt | 500 LEVEL",
-                            "width": 1002,
-                            "height": 1002,
-                            "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/2304\/3009\/products\/Men-Premium-T-Shirt-Tri-Gray_ba8479ea-12af-412a-8479-e8c9c5f60fba.jpg?v=1540954688",
-                            "variant_ids": [17804177965115, 17804177997883, 17804178063419, 17804178161723, 17804178227259, 17804178260027]
-                        },
-                        "available": true,
-                        "name": "Valuetainment Emprendedor R - Men's Premium T-Shirt \/ Tri Gray \/ S",
-                        "public_title": "Men's Premium T-Shirt \/ Tri Gray \/ S",
-                        "options": ["Men's Premium T-Shirt", "Tri Gray", "S"],
-                        "price": 2499,
-                        "weight": 122,
-                        "compare_at_price": null,
-                        "inventory_quantity": 1,
-                        "inventory_management": null,
-                        "inventory_policy": "deny",
-                        "barcode": null
-                    }, {
-                        "id": 17804177997883,
-                        "title": "Men's Premium T-Shirt \/ Tri Gray \/ M",
-                        "option1": "Men's Premium T-Shirt",
-                        "option2": "Tri Gray",
-                        "option3": "M",
-                        "sku": "C-C-CMNTTRG-XX-0076-001-25-BST",
-                        "requires_shipping": true,
-                        "taxable": true,
-                        "featured_image": {
-                            "id": 5900640747579,
-                            "product_id": 1825854390331,
-                            "position": 1,
-                            "created_at": "2018-10-30T21:58:06-05:00",
-                            "updated_at": "2018-10-30T21:58:08-05:00",
-                            "alt": "Patrick Bet-David Men's Premium T-Shirt | 500 LEVEL",
-                            "width": 1002,
-                            "height": 1002,
-                            "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/2304\/3009\/products\/Men-Premium-T-Shirt-Tri-Gray_ba8479ea-12af-412a-8479-e8c9c5f60fba.jpg?v=1540954688",
-                            "variant_ids": [17804177965115, 17804177997883, 17804178063419, 17804178161723, 17804178227259, 17804178260027]
-                        },
-                        "available": true,
-                        "name": "Valuetainment Emprendedor R - Men's Premium T-Shirt \/ Tri Gray \/ M",
-                        "public_title": "Men's Premium T-Shirt \/ Tri Gray \/ M",
-                        "options": ["Men's Premium T-Shirt", "Tri Gray", "M"],
-                        "price": 2499,
-                        "weight": 122,
-                        "compare_at_price": null,
-                        "inventory_quantity": 1,
-                        "inventory_management": null,
-                        "inventory_policy": "deny",
-                        "barcode": null
-                    }, {
-                        "id": 17804178063419,
-                        "title": "Men's Premium T-Shirt \/ Tri Gray \/ L",
-                        "option1": "Men's Premium T-Shirt",
-                        "option2": "Tri Gray",
-                        "option3": "L",
-                        "sku": "C-C-DMNTTRG-XX-0076-001-25-BST",
-                        "requires_shipping": true,
-                        "taxable": true,
-                        "featured_image": {
-                            "id": 5900640747579,
-                            "product_id": 1825854390331,
-                            "position": 1,
-                            "created_at": "2018-10-30T21:58:06-05:00",
-                            "updated_at": "2018-10-30T21:58:08-05:00",
-                            "alt": "Patrick Bet-David Men's Premium T-Shirt | 500 LEVEL",
-                            "width": 1002,
-                            "height": 1002,
-                            "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/2304\/3009\/products\/Men-Premium-T-Shirt-Tri-Gray_ba8479ea-12af-412a-8479-e8c9c5f60fba.jpg?v=1540954688",
-                            "variant_ids": [17804177965115, 17804177997883, 17804178063419, 17804178161723, 17804178227259, 17804178260027]
-                        },
-                        "available": true,
-                        "name": "Valuetainment Emprendedor R - Men's Premium T-Shirt \/ Tri Gray \/ L",
-                        "public_title": "Men's Premium T-Shirt \/ Tri Gray \/ L",
-                        "options": ["Men's Premium T-Shirt", "Tri Gray", "L"],
-                        "price": 2499,
-                        "weight": 139,
-                        "compare_at_price": null,
-                        "inventory_quantity": 1,
-                        "inventory_management": null,
-                        "inventory_policy": "deny",
-                        "barcode": null
-                    }, {
-                        "id": 17804178161723,
-                        "title": "Men's Premium T-Shirt \/ Tri Gray \/ XL",
-                        "option1": "Men's Premium T-Shirt",
-                        "option2": "Tri Gray",
-                        "option3": "XL",
-                        "sku": "C-C-EMNTTRG-XX-0076-001-25-BST",
-                        "requires_shipping": true,
-                        "taxable": true,
-                        "featured_image": {
-                            "id": 5900640747579,
-                            "product_id": 1825854390331,
-                            "position": 1,
-                            "created_at": "2018-10-30T21:58:06-05:00",
-                            "updated_at": "2018-10-30T21:58:08-05:00",
-                            "alt": "Patrick Bet-David Men's Premium T-Shirt | 500 LEVEL",
-                            "width": 1002,
-                            "height": 1002,
-                            "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/2304\/3009\/products\/Men-Premium-T-Shirt-Tri-Gray_ba8479ea-12af-412a-8479-e8c9c5f60fba.jpg?v=1540954688",
-                            "variant_ids": [17804177965115, 17804177997883, 17804178063419, 17804178161723, 17804178227259, 17804178260027]
-                        },
-                        "available": true,
-                        "name": "Valuetainment Emprendedor R - Men's Premium T-Shirt \/ Tri Gray \/ XL",
-                        "public_title": "Men's Premium T-Shirt \/ Tri Gray \/ XL",
-                        "options": ["Men's Premium T-Shirt", "Tri Gray", "XL"],
-                        "price": 2499,
-                        "weight": 159,
-                        "compare_at_price": null,
-                        "inventory_quantity": 1,
-                        "inventory_management": null,
-                        "inventory_policy": "deny",
-                        "barcode": null
-                    }, {
-                        "id": 17804178227259,
-                        "title": "Men's Premium T-Shirt \/ Tri Gray \/ XXL",
-                        "option1": "Men's Premium T-Shirt",
-                        "option2": "Tri Gray",
-                        "option3": "XXL",
-                        "sku": "C-C-FMNTTRG-XX-0076-001-25-BST",
-                        "requires_shipping": true,
-                        "taxable": true,
-                        "featured_image": {
-                            "id": 5900640747579,
-                            "product_id": 1825854390331,
-                            "position": 1,
-                            "created_at": "2018-10-30T21:58:06-05:00",
-                            "updated_at": "2018-10-30T21:58:08-05:00",
-                            "alt": "Patrick Bet-David Men's Premium T-Shirt | 500 LEVEL",
-                            "width": 1002,
-                            "height": 1002,
-                            "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/2304\/3009\/products\/Men-Premium-T-Shirt-Tri-Gray_ba8479ea-12af-412a-8479-e8c9c5f60fba.jpg?v=1540954688",
-                            "variant_ids": [17804177965115, 17804177997883, 17804178063419, 17804178161723, 17804178227259, 17804178260027]
-                        },
-                        "available": true,
-                        "name": "Valuetainment Emprendedor R - Men's Premium T-Shirt \/ Tri Gray \/ XXL",
-                        "public_title": "Men's Premium T-Shirt \/ Tri Gray \/ XXL",
-                        "options": ["Men's Premium T-Shirt", "Tri Gray", "XXL"],
-                        "price": 2499,
-                        "weight": 176,
-                        "compare_at_price": null,
-                        "inventory_quantity": 1,
-                        "inventory_management": null,
-                        "inventory_policy": "deny",
-                        "barcode": null
-                    }, {
-                        "id": 17804178260027,
-                        "title": "Men's Premium T-Shirt \/ Tri Gray \/ XXXL",
-                        "option1": "Men's Premium T-Shirt",
-                        "option2": "Tri Gray",
-                        "option3": "XXXL",
-                        "sku": "C-C-GMNTTRG-XX-0076-001-25-BST",
-                        "requires_shipping": true,
-                        "taxable": true,
-                        "featured_image": {
-                            "id": 5900640747579,
-                            "product_id": 1825854390331,
-                            "position": 1,
-                            "created_at": "2018-10-30T21:58:06-05:00",
-                            "updated_at": "2018-10-30T21:58:08-05:00",
-                            "alt": "Patrick Bet-David Men's Premium T-Shirt | 500 LEVEL",
-                            "width": 1002,
-                            "height": 1002,
-                            "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/2304\/3009\/products\/Men-Premium-T-Shirt-Tri-Gray_ba8479ea-12af-412a-8479-e8c9c5f60fba.jpg?v=1540954688",
-                            "variant_ids": [17804177965115, 17804177997883, 17804178063419, 17804178161723, 17804178227259, 17804178260027]
-                        },
-                        "available": true,
-                        "name": "Valuetainment Emprendedor R - Men's Premium T-Shirt \/ Tri Gray \/ XXXL",
-                        "public_title": "Men's Premium T-Shirt \/ Tri Gray \/ XXXL",
-                        "options": ["Men's Premium T-Shirt", "Tri Gray", "XXXL"],
-                        "price": 2499,
-                        "weight": 193,
-                        "compare_at_price": null,
-                        "inventory_quantity": 1,
-                        "inventory_management": null,
-                        "inventory_policy": "deny",
-                        "barcode": null
-                    }, {
-                        "id": 17804178325563,
-                        "title": "Men's Premium T-Shirt \/ Tri Red \/ S",
-                        "option1": "Men's Premium T-Shirt",
-                        "option2": "Tri Red",
-                        "option3": "S",
-                        "sku": "C-C-BMNTTRR-XX-0076-001-25-BST",
-                        "requires_shipping": true,
-                        "taxable": true,
-                        "featured_image": {
-                            "id": 5900640780347,
-                            "product_id": 1825854390331,
-                            "position": 2,
-                            "created_at": "2018-10-30T21:58:06-05:00",
-                            "updated_at": "2018-10-30T21:58:08-05:00",
-                            "alt": "Patrick Bet-David Men's Premium T-Shirt | 500 LEVEL",
-                            "width": 1002,
-                            "height": 1002,
-                            "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/2304\/3009\/products\/Men-Premium-T-Shirt-Tri-Red_99e7ceca-1c15-4dd4-b987-965f59fadf0b.jpg?v=1540954688",
-                            "variant_ids": [17804178325563, 17804178358331, 17804178423867, 17804178489403, 17804178554939, 17804178620475]
-                        },
-                        "available": true,
-                        "name": "Valuetainment Emprendedor R - Men's Premium T-Shirt \/ Tri Red \/ S",
-                        "public_title": "Men's Premium T-Shirt \/ Tri Red \/ S",
-                        "options": ["Men's Premium T-Shirt", "Tri Red", "S"],
-                        "price": 2499,
-                        "weight": 122,
-                        "compare_at_price": null,
-                        "inventory_quantity": 1,
-                        "inventory_management": null,
-                        "inventory_policy": "deny",
-                        "barcode": null
-                    }, {
-                        "id": 17804178358331,
-                        "title": "Men's Premium T-Shirt \/ Tri Red \/ M",
-                        "option1": "Men's Premium T-Shirt",
-                        "option2": "Tri Red",
-                        "option3": "M",
-                        "sku": "C-C-CMNTTRR-XX-0076-001-25-BST",
-                        "requires_shipping": true,
-                        "taxable": true,
-                        "featured_image": {
-                            "id": 5900640780347,
-                            "product_id": 1825854390331,
-                            "position": 2,
-                            "created_at": "2018-10-30T21:58:06-05:00",
-                            "updated_at": "2018-10-30T21:58:08-05:00",
-                            "alt": "Patrick Bet-David Men's Premium T-Shirt | 500 LEVEL",
-                            "width": 1002,
-                            "height": 1002,
-                            "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/2304\/3009\/products\/Men-Premium-T-Shirt-Tri-Red_99e7ceca-1c15-4dd4-b987-965f59fadf0b.jpg?v=1540954688",
-                            "variant_ids": [17804178325563, 17804178358331, 17804178423867, 17804178489403, 17804178554939, 17804178620475]
-                        },
-                        "available": true,
-                        "name": "Valuetainment Emprendedor R - Men's Premium T-Shirt \/ Tri Red \/ M",
-                        "public_title": "Men's Premium T-Shirt \/ Tri Red \/ M",
-                        "options": ["Men's Premium T-Shirt", "Tri Red", "M"],
-                        "price": 2499,
-                        "weight": 122,
-                        "compare_at_price": null,
-                        "inventory_quantity": 1,
-                        "inventory_management": null,
-                        "inventory_policy": "deny",
-                        "barcode": null
-                    }, {
-                        "id": 17804178423867,
-                        "title": "Men's Premium T-Shirt \/ Tri Red \/ L",
-                        "option1": "Men's Premium T-Shirt",
-                        "option2": "Tri Red",
-                        "option3": "L",
-                        "sku": "C-C-DMNTTRR-XX-0076-001-25-BST",
-                        "requires_shipping": true,
-                        "taxable": true,
-                        "featured_image": {
-                            "id": 5900640780347,
-                            "product_id": 1825854390331,
-                            "position": 2,
-                            "created_at": "2018-10-30T21:58:06-05:00",
-                            "updated_at": "2018-10-30T21:58:08-05:00",
-                            "alt": "Patrick Bet-David Men's Premium T-Shirt | 500 LEVEL",
-                            "width": 1002,
-                            "height": 1002,
-                            "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/2304\/3009\/products\/Men-Premium-T-Shirt-Tri-Red_99e7ceca-1c15-4dd4-b987-965f59fadf0b.jpg?v=1540954688",
-                            "variant_ids": [17804178325563, 17804178358331, 17804178423867, 17804178489403, 17804178554939, 17804178620475]
-                        },
-                        "available": true,
-                        "name": "Valuetainment Emprendedor R - Men's Premium T-Shirt \/ Tri Red \/ L",
-                        "public_title": "Men's Premium T-Shirt \/ Tri Red \/ L",
-                        "options": ["Men's Premium T-Shirt", "Tri Red", "L"],
-                        "price": 2499,
-                        "weight": 139,
-                        "compare_at_price": null,
-                        "inventory_quantity": 1,
-                        "inventory_management": null,
-                        "inventory_policy": "deny",
-                        "barcode": null
-                    }, {
-                        "id": 17804178489403,
-                        "title": "Men's Premium T-Shirt \/ Tri Red \/ XL",
-                        "option1": "Men's Premium T-Shirt",
-                        "option2": "Tri Red",
-                        "option3": "XL",
-                        "sku": "C-C-EMNTTRR-XX-0076-001-25-BST",
-                        "requires_shipping": true,
-                        "taxable": true,
-                        "featured_image": {
-                            "id": 5900640780347,
-                            "product_id": 1825854390331,
-                            "position": 2,
-                            "created_at": "2018-10-30T21:58:06-05:00",
-                            "updated_at": "2018-10-30T21:58:08-05:00",
-                            "alt": "Patrick Bet-David Men's Premium T-Shirt | 500 LEVEL",
-                            "width": 1002,
-                            "height": 1002,
-                            "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/2304\/3009\/products\/Men-Premium-T-Shirt-Tri-Red_99e7ceca-1c15-4dd4-b987-965f59fadf0b.jpg?v=1540954688",
-                            "variant_ids": [17804178325563, 17804178358331, 17804178423867, 17804178489403, 17804178554939, 17804178620475]
-                        },
-                        "available": true,
-                        "name": "Valuetainment Emprendedor R - Men's Premium T-Shirt \/ Tri Red \/ XL",
-                        "public_title": "Men's Premium T-Shirt \/ Tri Red \/ XL",
-                        "options": ["Men's Premium T-Shirt", "Tri Red", "XL"],
-                        "price": 2499,
-                        "weight": 159,
-                        "compare_at_price": null,
-                        "inventory_quantity": 1,
-                        "inventory_management": null,
-                        "inventory_policy": "deny",
-                        "barcode": null
-                    }, {
-                        "id": 17804178554939,
-                        "title": "Men's Premium T-Shirt \/ Tri Red \/ XXL",
-                        "option1": "Men's Premium T-Shirt",
-                        "option2": "Tri Red",
-                        "option3": "XXL",
-                        "sku": "C-C-FMNTTRR-XX-0076-001-25-BST",
-                        "requires_shipping": true,
-                        "taxable": true,
-                        "featured_image": {
-                            "id": 5900640780347,
-                            "product_id": 1825854390331,
-                            "position": 2,
-                            "created_at": "2018-10-30T21:58:06-05:00",
-                            "updated_at": "2018-10-30T21:58:08-05:00",
-                            "alt": "Patrick Bet-David Men's Premium T-Shirt | 500 LEVEL",
-                            "width": 1002,
-                            "height": 1002,
-                            "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/2304\/3009\/products\/Men-Premium-T-Shirt-Tri-Red_99e7ceca-1c15-4dd4-b987-965f59fadf0b.jpg?v=1540954688",
-                            "variant_ids": [17804178325563, 17804178358331, 17804178423867, 17804178489403, 17804178554939, 17804178620475]
-                        },
-                        "available": true,
-                        "name": "Valuetainment Emprendedor R - Men's Premium T-Shirt \/ Tri Red \/ XXL",
-                        "public_title": "Men's Premium T-Shirt \/ Tri Red \/ XXL",
-                        "options": ["Men's Premium T-Shirt", "Tri Red", "XXL"],
-                        "price": 2499,
-                        "weight": 176,
-                        "compare_at_price": null,
-                        "inventory_quantity": 1,
-                        "inventory_management": null,
-                        "inventory_policy": "deny",
-                        "barcode": null
-                    }, {
-                        "id": 17804178620475,
-                        "title": "Men's Premium T-Shirt \/ Tri Red \/ XXXL",
-                        "option1": "Men's Premium T-Shirt",
-                        "option2": "Tri Red",
-                        "option3": "XXXL",
-                        "sku": "C-C-GMNTTRR-XX-0076-001-25-BST",
-                        "requires_shipping": true,
-                        "taxable": true,
-                        "featured_image": {
-                            "id": 5900640780347,
-                            "product_id": 1825854390331,
-                            "position": 2,
-                            "created_at": "2018-10-30T21:58:06-05:00",
-                            "updated_at": "2018-10-30T21:58:08-05:00",
-                            "alt": "Patrick Bet-David Men's Premium T-Shirt | 500 LEVEL",
-                            "width": 1002,
-                            "height": 1002,
-                            "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/2304\/3009\/products\/Men-Premium-T-Shirt-Tri-Red_99e7ceca-1c15-4dd4-b987-965f59fadf0b.jpg?v=1540954688",
-                            "variant_ids": [17804178325563, 17804178358331, 17804178423867, 17804178489403, 17804178554939, 17804178620475]
-                        },
-                        "available": true,
-                        "name": "Valuetainment Emprendedor R - Men's Premium T-Shirt \/ Tri Red \/ XXXL",
-                        "public_title": "Men's Premium T-Shirt \/ Tri Red \/ XXXL",
-                        "options": ["Men's Premium T-Shirt", "Tri Red", "XXXL"],
-                        "price": 2499,
-                        "weight": 193,
-                        "compare_at_price": null,
-                        "inventory_quantity": 1,
-                        "inventory_management": null,
-                        "inventory_policy": "deny",
-                        "barcode": null
-                    }, {
-                        "id": 17804178686011,
-                        "title": "Men's Premium T-Shirt \/ Tri Ash \/ S",
-                        "option1": "Men's Premium T-Shirt",
-                        "option2": "Tri Ash",
-                        "option3": "S",
-                        "sku": "C-C-BMNTTRA-XX-0076-001-25-BST",
-                        "requires_shipping": true,
-                        "taxable": true,
-                        "featured_image": {
-                            "id": 5900640813115,
-                            "product_id": 1825854390331,
-                            "position": 3,
-                            "created_at": "2018-10-30T21:58:06-05:00",
-                            "updated_at": "2018-10-30T21:58:08-05:00",
-                            "alt": "Patrick Bet-David Men's Premium T-Shirt | 500 LEVEL",
-                            "width": 1002,
-                            "height": 1002,
-                            "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/2304\/3009\/products\/Men-Premium-T-Shirt-Tri-Ash_20e86f22-364b-41dc-875a-655765ca4cb4.jpg?v=1540954688",
-                            "variant_ids": [17804178686011, 17804178751547, 17804178817083, 17804178882619, 17804178915387, 17804178980923]
-                        },
-                        "available": true,
-                        "name": "Valuetainment Emprendedor R - Men's Premium T-Shirt \/ Tri Ash \/ S",
-                        "public_title": "Men's Premium T-Shirt \/ Tri Ash \/ S",
-                        "options": ["Men's Premium T-Shirt", "Tri Ash", "S"],
-                        "price": 2499,
-                        "weight": 122,
-                        "compare_at_price": null,
-                        "inventory_quantity": 1,
-                        "inventory_management": null,
-                        "inventory_policy": "deny",
-                        "barcode": null
-                    }, {
-                        "id": 17804178751547,
-                        "title": "Men's Premium T-Shirt \/ Tri Ash \/ M",
-                        "option1": "Men's Premium T-Shirt",
-                        "option2": "Tri Ash",
-                        "option3": "M",
-                        "sku": "C-C-CMNTTRA-XX-0076-001-25-BST",
-                        "requires_shipping": true,
-                        "taxable": true,
-                        "featured_image": {
-                            "id": 5900640813115,
-                            "product_id": 1825854390331,
-                            "position": 3,
-                            "created_at": "2018-10-30T21:58:06-05:00",
-                            "updated_at": "2018-10-30T21:58:08-05:00",
-                            "alt": "Patrick Bet-David Men's Premium T-Shirt | 500 LEVEL",
-                            "width": 1002,
-                            "height": 1002,
-                            "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/2304\/3009\/products\/Men-Premium-T-Shirt-Tri-Ash_20e86f22-364b-41dc-875a-655765ca4cb4.jpg?v=1540954688",
-                            "variant_ids": [17804178686011, 17804178751547, 17804178817083, 17804178882619, 17804178915387, 17804178980923]
-                        },
-                        "available": true,
-                        "name": "Valuetainment Emprendedor R - Men's Premium T-Shirt \/ Tri Ash \/ M",
-                        "public_title": "Men's Premium T-Shirt \/ Tri Ash \/ M",
-                        "options": ["Men's Premium T-Shirt", "Tri Ash", "M"],
-                        "price": 2499,
-                        "weight": 122,
-                        "compare_at_price": null,
-                        "inventory_quantity": 1,
-                        "inventory_management": null,
-                        "inventory_policy": "deny",
-                        "barcode": null
-                    }, {
-                        "id": 17804178817083,
-                        "title": "Men's Premium T-Shirt \/ Tri Ash \/ L",
-                        "option1": "Men's Premium T-Shirt",
-                        "option2": "Tri Ash",
-                        "option3": "L",
-                        "sku": "C-C-DMNTTRA-XX-0076-001-25-BST",
-                        "requires_shipping": true,
-                        "taxable": true,
-                        "featured_image": {
-                            "id": 5900640813115,
-                            "product_id": 1825854390331,
-                            "position": 3,
-                            "created_at": "2018-10-30T21:58:06-05:00",
-                            "updated_at": "2018-10-30T21:58:08-05:00",
-                            "alt": "Patrick Bet-David Men's Premium T-Shirt | 500 LEVEL",
-                            "width": 1002,
-                            "height": 1002,
-                            "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/2304\/3009\/products\/Men-Premium-T-Shirt-Tri-Ash_20e86f22-364b-41dc-875a-655765ca4cb4.jpg?v=1540954688",
-                            "variant_ids": [17804178686011, 17804178751547, 17804178817083, 17804178882619, 17804178915387, 17804178980923]
-                        },
-                        "available": true,
-                        "name": "Valuetainment Emprendedor R - Men's Premium T-Shirt \/ Tri Ash \/ L",
-                        "public_title": "Men's Premium T-Shirt \/ Tri Ash \/ L",
-                        "options": ["Men's Premium T-Shirt", "Tri Ash", "L"],
-                        "price": 2499,
-                        "weight": 139,
-                        "compare_at_price": null,
-                        "inventory_quantity": 1,
-                        "inventory_management": null,
-                        "inventory_policy": "deny",
-                        "barcode": null
-                    }, {
-                        "id": 17804178882619,
-                        "title": "Men's Premium T-Shirt \/ Tri Ash \/ XL",
-                        "option1": "Men's Premium T-Shirt",
-                        "option2": "Tri Ash",
-                        "option3": "XL",
-                        "sku": "C-C-EMNTTRA-XX-0076-001-25-BST",
-                        "requires_shipping": true,
-                        "taxable": true,
-                        "featured_image": {
-                            "id": 5900640813115,
-                            "product_id": 1825854390331,
-                            "position": 3,
-                            "created_at": "2018-10-30T21:58:06-05:00",
-                            "updated_at": "2018-10-30T21:58:08-05:00",
-                            "alt": "Patrick Bet-David Men's Premium T-Shirt | 500 LEVEL",
-                            "width": 1002,
-                            "height": 1002,
-                            "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/2304\/3009\/products\/Men-Premium-T-Shirt-Tri-Ash_20e86f22-364b-41dc-875a-655765ca4cb4.jpg?v=1540954688",
-                            "variant_ids": [17804178686011, 17804178751547, 17804178817083, 17804178882619, 17804178915387, 17804178980923]
-                        },
-                        "available": true,
-                        "name": "Valuetainment Emprendedor R - Men's Premium T-Shirt \/ Tri Ash \/ XL",
-                        "public_title": "Men's Premium T-Shirt \/ Tri Ash \/ XL",
-                        "options": ["Men's Premium T-Shirt", "Tri Ash", "XL"],
-                        "price": 2499,
-                        "weight": 159,
-                        "compare_at_price": null,
-                        "inventory_quantity": 1,
-                        "inventory_management": null,
-                        "inventory_policy": "deny",
-                        "barcode": null
-                    }, {
-                        "id": 17804178915387,
-                        "title": "Men's Premium T-Shirt \/ Tri Ash \/ XXL",
-                        "option1": "Men's Premium T-Shirt",
-                        "option2": "Tri Ash",
-                        "option3": "XXL",
-                        "sku": "C-C-FMNTTRA-XX-0076-001-25-BST",
-                        "requires_shipping": true,
-                        "taxable": true,
-                        "featured_image": {
-                            "id": 5900640813115,
-                            "product_id": 1825854390331,
-                            "position": 3,
-                            "created_at": "2018-10-30T21:58:06-05:00",
-                            "updated_at": "2018-10-30T21:58:08-05:00",
-                            "alt": "Patrick Bet-David Men's Premium T-Shirt | 500 LEVEL",
-                            "width": 1002,
-                            "height": 1002,
-                            "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/2304\/3009\/products\/Men-Premium-T-Shirt-Tri-Ash_20e86f22-364b-41dc-875a-655765ca4cb4.jpg?v=1540954688",
-                            "variant_ids": [17804178686011, 17804178751547, 17804178817083, 17804178882619, 17804178915387, 17804178980923]
-                        },
-                        "available": true,
-                        "name": "Valuetainment Emprendedor R - Men's Premium T-Shirt \/ Tri Ash \/ XXL",
-                        "public_title": "Men's Premium T-Shirt \/ Tri Ash \/ XXL",
-                        "options": ["Men's Premium T-Shirt", "Tri Ash", "XXL"],
-                        "price": 2499,
-                        "weight": 176,
-                        "compare_at_price": null,
-                        "inventory_quantity": 1,
-                        "inventory_management": null,
-                        "inventory_policy": "deny",
-                        "barcode": null
-                    }, {
-                        "id": 17804178980923,
-                        "title": "Men's Premium T-Shirt \/ Tri Ash \/ XXXL",
-                        "option1": "Men's Premium T-Shirt",
-                        "option2": "Tri Ash",
-                        "option3": "XXXL",
-                        "sku": "C-C-GMNTTRA-XX-0076-001-25-BST",
-                        "requires_shipping": true,
-                        "taxable": true,
-                        "featured_image": {
-                            "id": 5900640813115,
-                            "product_id": 1825854390331,
-                            "position": 3,
-                            "created_at": "2018-10-30T21:58:06-05:00",
-                            "updated_at": "2018-10-30T21:58:08-05:00",
-                            "alt": "Patrick Bet-David Men's Premium T-Shirt | 500 LEVEL",
-                            "width": 1002,
-                            "height": 1002,
-                            "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/2304\/3009\/products\/Men-Premium-T-Shirt-Tri-Ash_20e86f22-364b-41dc-875a-655765ca4cb4.jpg?v=1540954688",
-                            "variant_ids": [17804178686011, 17804178751547, 17804178817083, 17804178882619, 17804178915387, 17804178980923]
-                        },
-                        "available": true,
-                        "name": "Valuetainment Emprendedor R - Men's Premium T-Shirt \/ Tri Ash \/ XXXL",
-                        "public_title": "Men's Premium T-Shirt \/ Tri Ash \/ XXXL",
-                        "options": ["Men's Premium T-Shirt", "Tri Ash", "XXXL"],
-                        "price": 2499,
-                        "weight": 193,
-                        "compare_at_price": null,
-                        "inventory_quantity": 1,
-                        "inventory_management": null,
-                        "inventory_policy": "deny",
-                        "barcode": null
-                    }],
-                    "images": ["\/\/cdn.shopify.com\/s\/files\/1\/2304\/3009\/products\/Men-Premium-T-Shirt-Tri-Gray_ba8479ea-12af-412a-8479-e8c9c5f60fba.jpg?v=1540954688", "\/\/cdn.shopify.com\/s\/files\/1\/2304\/3009\/products\/Men-Premium-T-Shirt-Tri-Red_99e7ceca-1c15-4dd4-b987-965f59fadf0b.jpg?v=1540954688", "\/\/cdn.shopify.com\/s\/files\/1\/2304\/3009\/products\/Men-Premium-T-Shirt-Tri-Ash_20e86f22-364b-41dc-875a-655765ca4cb4.jpg?v=1540954688"],
-                    "featured_image": "\/\/cdn.shopify.com\/s\/files\/1\/2304\/3009\/products\/Men-Premium-T-Shirt-Tri-Gray_ba8479ea-12af-412a-8479-e8c9c5f60fba.jpg?v=1540954688",
-                    "options": ["Style", "Color", "Size"],
-                    "content": "\u003cp\u003eThe ultimate in comfort and intensely soft, our Premium Tri-Blend shirt is our most popular apparel style! This vintage graphic tee has knitted striations similar to your comfy P.E. T-shirts when you were young.\u003c\/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eSlim Fit\u003c\/li\u003e\r\n\u003cli\u003eTri Colors - 50% Polyester \/ 25% Cotton \/ 25% Rayon\u003c\/li\u003e\r\n\u003cli\u003eHeather Colors - 60% Cotton \/ 40% Polyester\u003c\/li\u003e\r\n\u003cli\u003eCrewneck Short Sleeve T-Shirt\u003c\/li\u003e\r\n\u003cli\u003eDigitally Printed Graphics\u003c\/li\u003e\r\n\u003cli\u003eMachine Wash Cold, Tumble Dry Low\u003c\/li\u003e\r\n\u003c\/ul\u003e"
-                });
-                observer.disconnect();
-            });
-            observer.observe($addToCartForm[0], config);
+<!-- Begin Google Analytics Vertical Attributes -->
+<script type="text/javascript">
+    ga('set', 'dimension1', 'shopify_US__');
+    ga('set', 'dimension2', 'collection.search');
+    ga('set', 'dimension3', '');
+</script>
+
+<script type="text/javascript">
+    var _learnq = _learnq || [];
+
+    _learnq.push(['account', 'PruMDc']);
+
+    (function () {
+        var b = document.createElement('script');
+        b.type = 'text/javascript';
+        b.async = true;
+        b.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'a.klaviyo.com/media/js/analytics/analytics.js';
+        var a = document.getElementsByTagName('script')[0];
+        a.parentNode.insertBefore(b, a);
+    })();
+</script>
+<!-- Begin linked options on product page script -->
+<script>
+    // (c) Copyright 2016 Caroline Schnapp. All Rights Reserved. Contact: mllegeorgesand@gmail.com
+    // See https://docs.shopify.com/themes/customization/navigation/link-product-options-in-menus
+    var Shopify = Shopify || {};
+    Shopify.optionsMap = {};
+    Shopify.updateOptionsInSelector = function (selectorIndex) {
+
+        switch (selectorIndex) {
+            case 0:
+                var key = 'root';
+                var selector = jQuery('.single-option-selector:eq(0)');
+                break;
+            case 1:
+                var key = jQuery('.single-option-selector:eq(0)').val();
+                var selector = jQuery('.single-option-selector:eq(1)');
+                break;
+            case 2:
+                var key = jQuery('.single-option-selector:eq(0)').val();
+                key += ' / ' + jQuery('.single-option-selector:eq(1)').val();
+                var selector = jQuery('.single-option-selector:eq(2)');
         }
 
+        var initialValue = selector.val();
+        selector.empty();
+        var availableOptions = Shopify.optionsMap[key];
+        for (var i = 0; i < availableOptions.length; i++) {
+            var option = availableOptions[i];
+            var newOption = jQuery('<option></option>').val(option).html(option);
+            selector.append(newOption);
+        }
+        jQuery('.swatch[data-option-index="' + selectorIndex + '"] .swatch-element').each(function () {
+            if (jQuery.inArray($(this).attr('data-value'), availableOptions) !== -1) {
+                $(this).removeClass('soldout').show().find(':radio').removeAttr('disabled', 'disabled').removeAttr('checked');
+            }
+            else {
+                $(this).addClass('soldout').hide().find(':radio').removeAttr('checked').attr('disabled', 'disabled');
+            }
+        });
+        if (jQuery.inArray(initialValue, availableOptions) !== -1) {
+            selector.val(initialValue);
+        }
+        selector.trigger('change');
 
-    </script>
-</div>
+    };
+    Shopify.linkOptionSelectors = function (product) {
+        // Building our mapping object.
+        for (var i = 0; i < product.variants.length; i++) {
+            var variant = product.variants[i];
+            if (variant.available) {
+                // Gathering values for the 1st drop-down.
+                Shopify.optionsMap['root'] = Shopify.optionsMap['root'] || [];
+                Shopify.optionsMap['root'].push(variant.option1);
+                Shopify.optionsMap['root'] = Shopify.uniq(Shopify.optionsMap['root']);
+                // Gathering values for the 2nd drop-down.
+                if (product.options.length > 1) {
+                    var key = variant.option1;
+                    Shopify.optionsMap[key] = Shopify.optionsMap[key] || [];
+                    Shopify.optionsMap[key].push(variant.option2);
+                    Shopify.optionsMap[key] = Shopify.uniq(Shopify.optionsMap[key]);
+                }
+                // Gathering values for the 3rd drop-down.
+                if (product.options.length === 3) {
+                    var key = variant.option1 + ' / ' + variant.option2;
+                    Shopify.optionsMap[key] = Shopify.optionsMap[key] || [];
+                    Shopify.optionsMap[key].push(variant.option3);
+                    Shopify.optionsMap[key] = Shopify.uniq(Shopify.optionsMap[key]);
+                }
+            }
+        }
+        // Update options right away.
+        Shopify.updateOptionsInSelector(0);
+        if (product.options.length > 1) Shopify.updateOptionsInSelector(1);
+        if (product.options.length === 3) Shopify.updateOptionsInSelector(2);
+        // When there is an update in the first dropdown.
+        jQuery(".single-option-selector:eq(0)").change(function () {
+            Shopify.updateOptionsInSelector(1);
+            if (product.options.length === 3) Shopify.updateOptionsInSelector(2);
+            return true;
+        });
+        // When there is an update in the second dropdown.
+        jQuery(".single-option-selector:eq(1)").change(function () {
+            if (product.options.length === 3) Shopify.updateOptionsInSelector(2);
+            return true;
+        });
+    };
+
+
+</script>
 </body>
 
 

@@ -1,4 +1,14 @@
+{% load get_images %}
 <div class="container content" style="padding-top:0">
+<script>
+                    function edit_href(id,pr_id) {
+                        $('.grid__image').attr('href' ,'/products/'+pr_id+'/'+id)
+                    }
+
+
+
+
+                </script>
         <main class="wrapper main-content" role="main">
             <div class="grid-uniform" id="mobile-home-boxes">
             </div>
@@ -8,13 +18,14 @@
             <h2></h2>
             <div class="grid-uniform home-grid">
                 <!-- TRUE RED PATCH? -->
+
                 {% for foo in product %}
                 <div class="grid__item fixed-width-variable-columns product">
                     <figure class="product-image-conatiner">
-                        <a href="{% url 'product_page' foo.id %}"
-                           class="link grid__image kids"><img style="width: 480px ;height: 480px;" data-n="1" class=""
-                                                              src="{{ foo.image.url }}"
-                                                              data-src="//cdn.shopify.com/s/files/1/2304/3009/products/Men-Premium-T-Shirt-Tri-Gray_99975a6f-1edc-4202-800c-e191564e9676_large.jpg?v=1540955338"
+                        <a href="/products/{{ foo.id }}/{%  get_main_image foo.id 1 %} "
+                           class="link grid__image kids"><img  data-n="1" class=""
+                                                              src="{%  get_main_image foo.id 2 %}"
+
                                                               alt="">
                             <div class="product-title">{{ foo.title }}</div>
                             <div class="product-style">{{ foo.style }}</div>
@@ -25,24 +36,11 @@
                             <li id="product-options-1825917534267">
                                 <div class="product-options-set set-2 o-2">
                                     <!-- TRUE RED PATCH? -->
-                                    <label class="color  number-1"
-                                           style="cursor:pointer;background-size:contain; background-color: gray; background-image: url(https://s3.amazonaws.com/storefront-assets-repository/Swatches/tri-gray.jpg)">
-                                        <input class="imageSrc" type="hidden"
-                                               value="{{ foo.image.url }}">
-                                        <input checked type="radio" data-option-index="1" name="Color"
-                                               value="Tri Gray"/>
-                                    </label>
+
                                     <!-- TRUE RED PATCH? -->
 
-                                    <label class="color  number-2"
-                                           style="cursor:pointer;background-size:contain; background-color: ash; background-image: url(https://s3.amazonaws.com/storefront-assets-repository/Swatches/tri-ash.jpg)">
-                                        <input class="imageSrc" type="hidden"
-                                               value="{{ foo.image.url }}">
-                                        <input type="radio" data-option-index="1" name="Color" value="Tri Ash"/>
-                                    </label>
+                                    {% get_rate foo.id foo.title %}
                                 </div>
-
-
                                 <div class="product-options-set set-3 o-6">
                                 </div>
                             </li>

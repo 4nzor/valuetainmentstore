@@ -2950,7 +2950,7 @@
                                 c = !1, clearTimeout(p.performance.timer), e.each(a, function (e, t) {
                                     o += t["Execution Time"]
                                 }), t += " " + o + "ms", l && (t += " '" + l + "'"), (console.group !== n || console.table !== n) && a.length > 0 && (console.groupCollapsed(t), console.table ? console.table(a) : e.each(a, function (e, t) {
-                                    console.log(t.Name + ": " + t["Execution Time"] + "ms")
+
                                 }), console.groupEnd()), a = []
                             }
                         }, invoke: function (t, o, i) {
@@ -3842,7 +3842,7 @@
                                 u = !1, clearTimeout(y.performance.timer), e.each(d, function (e, t) {
                                     n += t["Execution Time"]
                                 }), t += " " + n + "ms", l && (t += " '" + l + "'"), (console.group !== i || console.table !== i) && d.length > 0 && (console.groupCollapsed(t), console.table ? console.table(d) : e.each(d, function (e, t) {
-                                    console.log(t.Name + ": " + t["Execution Time"] + "ms")
+
                                 }), console.groupEnd()), d = []
                             }
                         }, invoke: function (t, n, a) {
@@ -5859,16 +5859,175 @@
 </div>
 
 <div id="CartDrawer" class="drawer drawer--right">
+
     <div class="drawer__header">
-        <div class="drawer__title h3">Shopping Cart (<span id="drawer-cart-title-qty"></span>)</div>
-        <div class="drawer__close js-drawer-close">
-            <button type="button" class="timber-icon-fallback-text">
-                <span class="timber-icon timber-icon-x" aria-hidden="true"></span>
-                <span class="fallback-text">"Close Cart"</span>
-            </button>
-        </div>
+      <div class="drawer__title h3">Shopping Cart (<span id="drawer-cart-title-qty">1</span>)</div>
+      <div class="drawer__close js-drawer-close">
+        <button type="button" class="timber-icon-fallback-text">
+          <span class="timber-icon timber-icon-x" aria-hidden="true"></span>
+          <span class="fallback-text">"Close Cart"</span>
+        </button>
+      </div>
     </div>
-    <div id="CartContainer"></div>
+    <div id="CartContainer">
+
+    <form action="/cart" method="post" novalidate="" class="cart ajaxcart">
+      <div class="ajaxcart__inner">
+
+        <div class="ajaxcart__product">
+          <div class="ajaxcart__row" data-line="1">
+            <div class="grid">
+              <div class="grid__item one-quarter"><img src="https://cdn.shopify.com/s/files/1/2304/3009/products/Women-V-Neck-T-Shirt-Tri-Ash_9cc52b1f-7d2b-4fa7-9335-f0944ba5fdc1_small.jpg?v=1540995334" alt="">
+              </div>
+              <div class="grid__item three-quarters">
+                <p>
+                  Valuetainment I Am L
+
+                    <span class="ajaxcart__product-meta">Women's V-Neck T-Shirt / Tri Ash / S</span>
+
+
+
+                </p>
+
+                <div class="grid--full display-table">
+                  <div class="grid__item display-table-cell one-half">
+
+                    <div class="">
+                                          <input type="number" name="updates[]" class="ajaxcart__qty-num" value="1" min="0" data-id="17850627981371" data-line="1" aria-label="quantity" pattern="[0-9]*">
+                      <button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--minus _icon-fallback-text" data-id="17850627981371" data-qty="0" data-line="1">
+                        Remove Item (1)
+                      </button>
+
+
+    </div>
+
+
+                  </div>
+                  <div class="grid__item display-table-cell one-half text-right">
+                    $24.99
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+      <div class="ajaxcart__footer">
+       <h1>Summary</h1>
+        <div class="grid--full subtotal">
+          <div class="grid__item two-thirds">
+            <p>Subtotal</p>
+          </div>
+          <div class="grid__item one-third text-right">
+            <p>$24.99</p>
+          </div>
+        </div>
+
+        <div class="grid--full shipping-taxes">
+
+
+        	<div class="grid__item two-thirds">Shipping &amp; taxes</div>
+          <div class="grid__item one-third text-right">$__.__</div>
+
+
+
+    	</div>
+
+
+
+        <button type="submit" class="btn--secondary btn--full cart__checkout guest_checkout" name="checkout">
+          Guest Checkout
+        </button>
+
+
+
+
+
+
+
+
+
+
+          <div class="additional_checkout_buttons"><button name="button" type="submit" aria-label="Apple Pay" data-strategy="cart" style="display: none" class="additional-checkout-button additional-checkout-button--apple-pay"><span class="additional-checkout-button-visually-hidden">Checkout with: Apple Pay</span><span class="additional-checkout-button__logo"></span></button><div class="additional-checkout-button additional-checkout-button--paypal" data-strategy="cart" id="cf35fd3af5c29c7198e67bf6bfffb3b0" data-button-rendered="true"><div id="zoid-paypal-button-62694bbf25" class="paypal-button paypal-button-context-iframe paypal-button-label-paypal paypal-button-size-responsive paypal-button-layout-horizontal" style=""><style>
+                    #zoid-paypal-button-62694bbf25 {
+                        font-size: 0;
+                        width: 100%;
+                        overflow: hidden;
+                    }
+
+                    #zoid-paypal-button-62694bbf25.paypal-button-size-responsive {
+                        text-align: center;
+                    }
+
+                    #zoid-paypal-button-62694bbf25 > .zoid-outlet {
+                        display: inline-block;
+                        min-width: 150px;
+                        max-width: 750px;
+                        position: relative;
+                    }
+
+                    #zoid-paypal-button-62694bbf25.paypal-button-layout-vertical > .zoid-outlet {
+                        min-width: 150px;
+                    }
+
+                    #zoid-paypal-button-62694bbf25 > .zoid-outlet {
+                        width:  250px;
+                        height: 44px;
+                    }
+
+                     #zoid-paypal-button-62694bbf25.paypal-button-size-responsive > .zoid-outlet {
+                        width: 100%;
+                    }
+
+                    #zoid-paypal-button-62694bbf25 > .zoid-outlet > iframe {
+                        min-width: 100%;
+                        max-width: 100%;
+                        width: 150px;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    #zoid-paypal-button-62694bbf25 > .zoid-outlet > iframe.zoid-component-frame {
+                        z-index: 100;
+                    }
+
+                    #zoid-paypal-button-62694bbf25 > .zoid-outlet > iframe.zoid-prerender-frame {
+                        transition: opacity .2s linear;
+                        z-index: 200;
+                    }
+
+                    #zoid-paypal-button-62694bbf25 > .zoid-outlet > iframe.zoid-visible {
+                        opacity: 1;
+                    }
+
+                    #zoid-paypal-button-62694bbf25 > .zoid-outlet > iframe.zoid-invisible {
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+                </style><div class="zoid-outlet" style="height: 44px;"><iframe style="background-color: transparent;" class="zoid-component-frame zoid-visible" allowtransparency="true" name="xcomponent__ppbutton__min__pmrhk2leei5ceojqhaygenjrmq3tkirmej2gczzchirhaylzobqwyllcov2hi33oeiwcey3pnvyg63tfnz2faylsmvxhiir2pmrhezlgei5ce5dpoarh2lbcojsw4zdfojigc4tfnz2ceot3ejzgkzrchirhi33qej6syitqojxxa4zchj5se5dzobsseorcojqxoirmej3gc3dvmurdu6zcmvxhmir2ejyhe33eovrxi2lpnyrcyitdn5ww22luei5gmylmonssyittor4wyzjchj5se3dbmjswyir2ejygc6lqmfwcelbcnrqxs33voqrduitin5zgs6tpnz2gc3bcfqrgg33mn5zceorcm5xwyzbcfqrhg2dbobsseorcojswg5bcfqrhg2l2murduitsmvzxa33oonuxmzjcfqrg2ylymj2xi5dpnzzseorrfqrhiylhnruw4zjchjtgc3dtmuwce2dfnftwq5bchi2di7jmejygc6lnmvxhiir2pmrf6x3upfygkx27ei5cex27mz2w4y3unfxw4x27ej6syitpnzaxk5din5zgs6tfei5hwis7l52hs4dfl5pseorcl5pwm5lomn2gs33ol5pse7jmejxw4utfnvsw2ytfojkxgzlsei5hwis7l52hs4dfl5pseorcl5pwm5lomn2gs33ol5pse7jmejsg63lbnfxceorco53xoltwmfwhkzlumfuw43lfnz2hg5dpojss4y3pnurcyittmvzxg2lpnzeuiir2eiygmobsmfrwizjsmfpwozjtmr2w42trnbuxuzdleiwceytvor2g63stmvzxg2lpnzeuiir2eiydomzrge4tsmlcmnpwozjtmr2w42trnbuxuzdleiwce3lforqseot3puwce43povzggzjchirg2yloovqwyirmejyhezlgmv2gg2cmn5tws3rchjtgc3dtmuwceztvnzsgs3thei5hwitbnrwg653fmqrduw25fqrgi2ltmfwgy33xmvsceos3ej3gk3tnn4rf2lbcojsw2zlnmjsxezleei5fwxjmejzgk3lfnvrgk4rchj5sex27or4xazk7l4rduis7l5thk3tdoruw63s7l4rh27jmejxw4utfnzsgk4rchj5sex27or4xazk7l4rduis7l5thk3tdoruw63s7l4rh2lbcn5xegylomnswyir2pmrf6x3upfygkx27ei5cex27mz2w4y3unfxw4x27ej6syitpnzbwy2ldnmrdu6zcl5pxi6lqmvpv6ir2ejpv6ztvnzrxi2lpnzpv6it5fqrgy33dmfwgkir2ejzhkx2skurcyitmn5tuyzlwmvwceorco5qxe3rcfqrgc53bnf2fa33qovyee4tjmrtwkir2pmrf6x3upfygkx27ei5cex27mz2w4y3unfxw4x27ej6syittovyha3dfnvsw45bchj5sez3forigc6lnmvxhit3qoruw63ttei5hwis7l52hs4dfl5pseorcl5pwm5lomn2gs33ol5pse7jmejqwizcqmf4w2zloorcgk5dbnfwhgir2pmrf6x3upfygkx27ei5cex27mz2w4y3unfxw4x27ej6syithmv2faylznvsw45cemv2gc2lmomrdu6zcl5pxi6lqmvpv6ir2ejpv6ztvnzrxi2lpnzpv6it5puwce5dfon2ceot3ejqwg5djn5xceorcmnugky3ln52xiit5fqrhk2leei5cenrsgy4tiytcmyzdkirmej3gk4ttnfxw4ir2ejwws3rcfqrg63sfojzg64rchj5sex27or4xazk7l4rduis7l5thk3tdoruw63s7l4rh27l5fqrgszbchirgenleme2toolgmnrselbcmrxw2yljnyrduitior2ha4z2f4xxo53xfz3gc3dvmv2gc2lonvsw45dtorxxezjomnxw2it5__" title="ppbutton" scrolling="no" allowpaymentrequest="allowpaymentrequest" src="https://www.paypal.com/webapps/hermes/button?env=production&amp;style.label=paypal&amp;style.layout=horizontal&amp;style.color=gold&amp;style.shape=rect&amp;style.size=responsive&amp;style.maxbuttons=1&amp;style.tagline=false&amp;style.height=44&amp;domain=www.valuetainmentstore.com&amp;sessionID=0f82acde2a_ge3dunjqhizdk&amp;buttonSessionID=07311991bc_ge3dunjqhizdk&amp;funding.disallowed=venmo&amp;locale.x=ru_RU&amp;logLevel=warn&amp;uid=62694bbf25&amp;version=min&amp;xcomponent=1" frameborder="0"></iframe></div></div></div><a style="display: inline-block" href="javascript:void(0)" aria-describedby="forwarding-external-message" class="amazon-payments-pay-button additional-checkout-button additional-checkout-button--amazon" id="amazon-payments-pay-button-7fwagpa9nz" data-amazon-payments-pay-button="true"><img alt="Checkout with: Amazon Pay" class="additional-checkout-button__logo" src="//cdn.shopify.com/s/assets/checkout/easy-checkout-btn-amazon-pay-72091bddbea7788c02d934d95d97fe6a0da7618cadc5838c40f44f190fa24442.png"><img class=" amazonpay-button-inner-image alt-payment-list-amazon-button-image" style="cursor:pointer; max-height:30px;" alt="AmazonPay" id="OffAmazonPaymentsWidgets0" src="https://d2ldlvi1yef00y.cloudfront.net/default/us/live/lwa/gold/small/PwA.png" aria-hidden="true"></a></div>
+
+      </div>
+
+      <a href="#" onclick="javascript:timber.RightDrawer.close(); return false;" class="js-drawer-close checkout-continue-button">Continue Shopping</a>
+
+
+    </form>
+          <div class="accepted-payments">
+          <p> Accepted Payments </p>
+      <span class="timber-icon timber-icon-american_express"></span>
+      <span class="timber-icon timber-icon-master"></span>
+      <span class="timber-icon timber-icon-discover"></span>
+      <span class="timber-icon timber-icon-visa"></span>
+      <span class="timber-icon timber-icon-amazon_payments"></span>
+      <span class="timber-icon timber-icon-paypal"></span>
+      </div>
+
+  </div>
 </div>
 
 
@@ -6606,7 +6765,8 @@
             var params = ga.getAll()[0].get('linkerParam')
             var action = jQuery('.cart.ajaxcart').attr('action');
             jQuery('.cart.ajaxcart').attr('action', action + "?" + params);
-            console.log("Seen cart");
+
+
             clearInterval(timer);
 
         }
