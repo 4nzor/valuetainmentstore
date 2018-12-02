@@ -93,6 +93,14 @@ class PrImage(models.Model):
     image_tag.short_description = 'Image'
     image_tag.allow_tags = True
 
+
 class GuestUser(models.Model):
     ip = models.GenericIPAddressField()
     cookie = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.ip
+
+
+class Order(models.Model):
+    pass

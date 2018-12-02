@@ -46,7 +46,6 @@ class ProductPage(View):
                 'products': Product.objects.all()}, **MENU))
 
     def post(self, request, product_id, photo_id):
-        print(request.POST)
         return JsonResponse({})
 
 
@@ -74,7 +73,6 @@ def set_cookie(request):
     ip = get_client_ip(request)
     user = GuestUser.objects.get(ip=ip)
     user.cookie = request.POST.get('value')
-    print(request.POST.get('value'))
     user.save()
     return JsonResponse({})
 
@@ -82,5 +80,4 @@ def set_cookie(request):
 def get_cookie(request):
     ip = get_client_ip(request)
     user = GuestUser.objects.get(ip=ip)
-    print(user.cookie)
     return JsonResponse({'value': user.cookie})

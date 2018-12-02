@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="calcform" name="calcform">
+    <input type="number" min="0" max="255" name="r" id="r" class="intext" placeholder="0" tabindex="1" autofocus=""
+           oninput="onnumber(this,1)">
+    <input type="number" min="0" max="255" name="g" id="g" class="intext" placeholder="0" tabindex="2"
+           oninput="onnumber(this,2)">
+    <input type="number" min="0" max="255" name="b" id="b" class="intext" placeholder="0" tabindex="3"
+           oninput="onnumber(this,3)">
+    <button type="button" title="Convert" class="btn" tabindex="4" onclick="calc()"><img
+            src="/lib/icons/glyphicons_all/glyphicons_halflings/glyphicons_halflings_030_refresh.png" alt=""> Convert
+    </button>
+    <input type="text" name="hex" class="outtext" tabindex="7" readonly="">
+    <input type="text" name="hsl" class="outtext" tabindex="9" readonly="">
+</form>
+<script type="text/javascript" src="http://chir.ag/projects/ntc/ntc.js"></script>
+<script>
+    function calc() {
+        r = document.calcform.r.value;
+        g = document.calcform.g.value;
+        b = document.calcform.b.value;
+        if (r == "") r = 0;
+        if (g == "") g = 0;
+        if (b == "") b = 0;
+        r = parseInt(r);
+        g = parseInt(g);
+        b = parseInt(b);
+        if (r < 0) r = 0;
+        if (g < 0) g = 0;
+        if (b < 0) b = 0;
+        if (r > 255) r = 255;
+        if (g > 255) g = 255;
+        if (b > 255) b = 255;
+        hex = r * 65536 + g * 256 + b;
+        hex = hex.toString(16, 6);
+        len = hex.length;
+        if (len < 6)
+            for (i = 0; i < 6 - len; i++)
+                hex = '0' + hex;
+        var result = ntc.name('#'+hex);
+        document.calcform.hex.value =  result[1]
+
+    }
+
+</script>
+</body>
+</html>

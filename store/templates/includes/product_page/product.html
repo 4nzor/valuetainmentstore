@@ -74,10 +74,41 @@
 
 
             </div>
+            <script type="text/javascript" src="http://chir.ag/projects/ntc/ntc.js"></script>
+
+            <div class="selected-variant">Стиль: {{ product.style }} / </div>
+ <script>
+
+                    var server_color = String('{{ main_image.get_color}}');
+                    var color = server_color.replace(/[{()}]/g, '');
+                    var arr = new Array();
+                    arr = color.split(',');
+                    r = arr[0];
+                    g = arr[1];
+                    b = arr[2];
+                    if (r == "") r = 0;
+                    if (g == "") g = 0;
+                    if (b == "") b = 0;
+                    r = parseInt(r);
+                    g = parseInt(g);
+                    b = parseInt(b);
+                    if (r < 0) r = 0;
+                    if (g < 0) g = 0;
+                    if (b < 0) b = 0;
+                    if (r > 255) r = 255;
+                    if (g > 255) g = 255;
+                    if (b > 255) b = 255;
+                    hex = r * 65536 + g * 256 + b;
+                    hex = hex.toString(16, 6);
+                    len = hex.length;
+                    if (len < 6)
+                        for (i = 0; i < 6 - len; i++)
+                            hex = '0' + hex;
+                    var result = ntc.name('#' + hex);
+                    $('.selected-variant').append( 'Цвет '+ result[1])
 
 
-            <div class="selected-variant">Style: {{ product.style }} / Color: {{ product.colour }}</div>
-
+            </script>
 
             <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
                 <meta itemprop="priceCurrency" content="USD">
@@ -86,7 +117,7 @@
 
                 <script>
 
-                    var count=0;
+                    var count = 0;
 
 
                     function add_to_basket() {
@@ -95,9 +126,9 @@
                             type: 'get',
                             success: function (data) {
                                 count = data.value;
-                                count = Number(count) ;
-                                count = count+1;
-                                 $('#CartCount').html(count);
+                                count = Number(count);
+                                count = count + 1;
+                                $('#CartCount').html(count);
                                 $.ajax({
                                     url: '/set_cookie/',
                                     type: 'post',
